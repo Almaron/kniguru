@@ -1,0 +1,7 @@
+{"ts":1369305107216,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"class AddTypeToBadges < ActiveRecord::Migration\n  def change\n    add_column :badges, :type, :string\n  end\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":110}]],"length":110}
+{"contributors":[],"silentsave":true,"ts":1369301503301,"patch":[[{"diffs":[[0,"g\n  end\n"],[1,"  \n"],[0,"end\n"]],"start1":98,"start2":98,"length1":12,"length2":15}]],"length":113,"saved":false}
+{"ts":1369301504442,"patch":[[{"diffs":[[0,"end\n"],[-1,"  \n"],[0,"end\n"]],"start1":102,"start2":102,"length1":11,"length2":8}]],"length":110,"saved":false}
+{"ts":1369301508750,"patch":[[{"diffs":[[0,":string\n"],[1,"    \n    add_inde\n"],[0,"  end\nen"]],"start1":92,"start2":92,"length1":16,"length2":34}]],"length":128,"saved":false}
+{"ts":1369301509813,"patch":[[{"diffs":[[0,"add_inde"],[1,"x "],[0,"\n  end\ne"]],"start1":109,"start2":109,"length1":16,"length2":18}]],"length":130,"saved":false}
+{"ts":1369301510837,"patch":[[{"diffs":[[0,"d_index "],[1,":ba"],[0,"\n  end\ne"]],"start1":111,"start2":111,"length1":16,"length2":19}]],"length":133,"saved":false}
+{"ts":1369301514444,"patch":[[{"diffs":[[0,"ndex :ba"],[1,"dges, :type"],[0,"\n  end\ne"]],"start1":114,"start2":114,"length1":16,"length2":27}]],"length":144,"saved":false}

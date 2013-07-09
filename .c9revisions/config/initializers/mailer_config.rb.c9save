@@ -1,0 +1,42 @@
+{"ts":1368693237421,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":true,"ts":1368693240369,"patch":[[{"diffs":[[1,"config = Yaml.load_from_file(Rails.root.join('config','app_config.yml'))\n\nAPP_CONFIG = config.deep_simbolize_keys"]],"start1":0,"start2":0,"length1":0,"length2":113}]],"length":113,"saved":false}
+{"ts":1368693248432,"patch":[[{"diffs":[[0,"g','"],[-1,"app"],[1,"mail"],[0,"_con"]],"start1":51,"start2":51,"length1":11,"length2":12}]],"length":114,"saved":false}
+{"ts":1368693285408,"patch":[[{"diffs":[[-1,"config"],[1,"options"],[0," = Y"],[-1,"aml"],[1,"AML"],[0,".load_"],[-1,"from_"],[0,"file("],[1,"\"#{"],[0,"Rail"]],"start1":0,"start2":0,"length1":33,"length2":32},{"diffs":[[0,"root"],[-1,".join('config','mail_config.yml'))\n\nAPP_CONFIG = config.deep_simbolize_keys"],[1,"}/config/ymls/mailer.yml\")[Rails.env]\n\nActionMailer::Base.smtp_settings = options['smtp'].symbolize_keys\nActionMailer::Base.delivery_method = :smtp\n\nActionMailer::Base.default_url_options[:host] = options['host']\nActionMailer::Base.raise_delivery_errors = true if Rails.env.development?\n\n#require 'development_mail_interceptor'\n#Mail.register_interceptor(DevelopmentMailInterceptor) if Rails.env.development?"]],"start1":34,"start2":34,"length1":79,"length2":412}]],"length":446,"saved":false}
+{"ts":1368693294911,"patch":[[{"diffs":[[0,"ile("],[-1,"\"#{"],[0,"Rails.ro"],[-1,"ot}/config/ymls/mailer.yml\""],[0,")[Ra"]],"start1":21,"start2":21,"length1":46,"length2":16}]],"length":416,"saved":false}
+{"ts":1368693296767,"patch":[[{"diffs":[[0,"Rails.ro"],[1,"ot.join"],[0,")[Rails."]],"start1":25,"start2":25,"length1":16,"length2":23}]],"length":423,"saved":false}
+{"ts":1368693298466,"patch":[[{"diffs":[[0,"oot.join"],[1,"('')"],[0,")[Rails."]],"start1":32,"start2":32,"length1":16,"length2":20}]],"length":427,"saved":false}
+{"ts":1368693298950,"patch":[[{"diffs":[[0,"t.join('"],[1,"co"],[0,"'))[Rail"]],"start1":34,"start2":34,"length1":16,"length2":18}]],"length":429,"saved":false}
+{"ts":1368693300567,"patch":[[{"diffs":[[0,"join('co"],[1,"nfig"],[0,"'))[Rail"]],"start1":36,"start2":36,"length1":16,"length2":20}]],"length":433,"saved":false}
+{"ts":1368693302326,"patch":[[{"diffs":[[0,"'config'"],[1,",'ma'"],[0,"))[Rails"]],"start1":41,"start2":41,"length1":16,"length2":21}]],"length":438,"saved":false}
+{"ts":1368693303696,"patch":[[{"diffs":[[0,"fig','ma"],[1,"ilre"],[0,"'))[Rail"]],"start1":45,"start2":45,"length1":16,"length2":20}]],"length":442,"saved":false}
+{"ts":1368693304817,"patch":[[{"diffs":[[0,"g','mail"],[-1,"r"],[0,"e'))[Rai"]],"start1":47,"start2":47,"length1":17,"length2":16}]],"length":441,"saved":false}
+{"ts":1368693305829,"patch":[[{"diffs":[[0,"','maile"],[1,"r"],[0,"'))[Rail"]],"start1":48,"start2":48,"length1":16,"length2":17}]],"length":442,"saved":false}
+{"ts":1368693307102,"patch":[[{"diffs":[[0,",'mailer"],[1,"_"],[0,"'))[Rail"]],"start1":49,"start2":49,"length1":16,"length2":17}]],"length":443,"saved":false}
+{"ts":1368693309771,"patch":[[{"diffs":[[0,"'mailer_"],[1,"config"],[0,"'))[Rail"]],"start1":50,"start2":50,"length1":16,"length2":22}]],"length":449,"saved":false}
+{"ts":1368693310915,"patch":[[{"diffs":[[0,"r_config"],[1,".y"],[0,"'))[Rail"]],"start1":56,"start2":56,"length1":16,"length2":18}]],"length":451,"saved":false}
+{"ts":1368693312619,"patch":[[{"diffs":[[0,"config.y"],[1,"ml"],[0,"'))[Rail"]],"start1":58,"start2":58,"length1":16,"length2":18}]],"length":453,"saved":false}
+{"ts":1368693325781,"patch":[[{"diffs":[[0,"l'))"],[-1,"[Rails.env]"],[0,"\n\nAc"]],"start1":67,"start2":67,"length1":19,"length2":8}]],"length":442,"saved":false}
+{"ts":1368693326975,"patch":[[{"diffs":[[0,"g.yml'))"],[1,".s"],[0,"\n\nAction"]],"start1":63,"start2":63,"length1":16,"length2":18}]],"length":444,"saved":false}
+{"ts":1368693328172,"patch":[[{"diffs":[[0,".yml'))."],[-1,"s"],[1,"d"],[0,"\n\nAction"]],"start1":64,"start2":64,"length1":17,"length2":17}]],"length":444,"saved":false}
+{"ts":1368693330309,"patch":[[{"diffs":[[0,"yml')).d"],[1,"eep_"],[0,"\n\nAction"]],"start1":65,"start2":65,"length1":16,"length2":20}]],"length":448,"saved":false}
+{"ts":1368693331627,"patch":[[{"diffs":[[0,")).deep_"],[1,"sy"],[0,"\n\nAction"]],"start1":69,"start2":69,"length1":16,"length2":18}]],"length":450,"saved":false}
+{"ts":1368693334204,"patch":[[{"diffs":[[0,".deep_sy"],[1,"mbolize_"],[0,"\n\nAction"]],"start1":71,"start2":71,"length1":16,"length2":24}]],"length":458,"saved":false}
+{"ts":1368693335438,"patch":[[{"diffs":[[0,"mbolize_"],[1,"keys"],[0,"\n\nAction"]],"start1":79,"start2":79,"length1":16,"length2":20}]],"length":462,"saved":false}
+{"ts":1368693341041,"patch":[[{"diffs":[[0,"e_keys\n\n"],[1,"\n"],[0,"ActionMa"]],"start1":85,"start2":85,"length1":16,"length2":17}]],"length":463,"saved":false}
+{"ts":1368693343930,"patch":[[{"diffs":[[0,"e_keys\n\n"],[-1,"\n"],[0,"ActionMa"]],"start1":85,"start2":85,"length1":17,"length2":16}]],"length":462,"saved":false}
+{"ts":1368693346374,"patch":[[{"diffs":[[0,"ize_keys"],[1,"!"],[0,"\n\nAction"]],"start1":83,"start2":83,"length1":16,"length2":17}]],"length":463,"saved":false}
+{"ts":1368693347694,"patch":[[{"diffs":[[0,"ze_keys!"],[1,"[R]"],[0,"\n\nAction"]],"start1":84,"start2":84,"length1":16,"length2":19}]],"length":466,"saved":false}
+{"ts":1368693349298,"patch":[[{"diffs":[[0,"_keys![R"],[1,"ails.en"],[0,"]\n\nActio"]],"start1":86,"start2":86,"length1":16,"length2":23}]],"length":473,"saved":false}
+{"ts":1368693350423,"patch":[[{"diffs":[[0,"Rails.en"],[1,"v"],[0,"]\n\nActio"]],"start1":93,"start2":93,"length1":16,"length2":17}]],"length":474,"saved":false}
+{"ts":1368693374170,"patch":[[{"diffs":[[0,"ons["],[-1,"'smtp'"],[1,"Жьез"],[0,"].sy"]],"start1":144,"start2":144,"length1":14,"length2":12}]],"length":472,"saved":false}
+{"ts":1368693376264,"patch":[[{"diffs":[[0,"ons["],[-1,"Жьез"],[1,":mtp"],[0,"].sy"]],"start1":144,"start2":144,"length1":12,"length2":12}]],"length":472,"saved":false}
+{"ts":1368693377683,"patch":[[{"diffs":[[0,"ptions[:"],[1,"s"],[0,"mtp].sym"]],"start1":141,"start2":141,"length1":16,"length2":17}]],"length":473,"saved":false}
+{"ts":1368693379203,"patch":[[{"diffs":[[0,"mtp]"],[-1,".symbolize_keys"],[0,"\nAct"]],"start1":150,"start2":150,"length1":23,"length2":8}]],"length":458,"saved":false}
+{"ts":1368694005502,"patch":[[{"diffs":[[0,"eys!"],[-1,"[Rails.env]"],[1,"\no"],[0,"\n\nAc"]],"start1":88,"start2":88,"length1":19,"length2":10}]],"length":449,"saved":false}
+{"ts":1368694007797,"patch":[[{"diffs":[[0,"_keys!\no"],[1,"ptions = Ra"],[0,"\n\nAction"]],"start1":86,"start2":86,"length1":16,"length2":27}]],"length":460,"saved":false}
+{"ts":1368694009908,"patch":[[{"diffs":[[0,"tions = "],[-1,"Ra"],[1,"op"],[0,"\n\nAction"]],"start1":95,"start2":95,"length1":18,"length2":18}]],"length":460,"saved":false}
+{"ts":1368694012131,"patch":[[{"diffs":[[0,"ons = op"],[1,"tions[Ra]"],[0,"\n\nAction"]],"start1":97,"start2":97,"length1":16,"length2":25}]],"length":469,"saved":false}
+{"ts":1368694013651,"patch":[[{"diffs":[[0,"tions[Ra"],[1,"ils.e"],[0,"]\n\nActio"]],"start1":105,"start2":105,"length1":16,"length2":21}]],"length":474,"saved":false}
+{"ts":1368694014945,"patch":[[{"diffs":[[0,"[Rails.e"],[1,"nv"],[0,"]\n\nActio"]],"start1":110,"start2":110,"length1":16,"length2":18}]],"length":476,"saved":false}
+{"ts":1368694022960,"patch":[[{"diffs":[[0,"ails.env"],[1,".to_sym"],[0,"]\n\nActio"]],"start1":112,"start2":112,"length1":16,"length2":23}]],"length":483,"saved":false}
+{"contributors":[],"silentsave":true,"ts":1368694530309,"patch":[[{"diffs":[[-1,"options = YAML.load_file(Rails.root.join('config','mailer_config.yml')).deep_symbolize_keys!\noptions = options[Rails.env.to_sym]\n\nActionMailer::Base.smtp_settings = options[:smtp]\nActionMailer::Base.delivery_method = :smtp\n\nActionMailer::Base.default_url_options[:host] = options['host']\nActionMailer::Base.raise_delivery_errors = true if Rails.env.development?\n\n#require 'development_mail_interceptor'\n#Mail.register_interceptor(DevelopmentMailInterceptor) if Rails.env.development?"]],"start1":0,"start2":0,"length1":483,"length2":0}]],"length":0,"saved":false}

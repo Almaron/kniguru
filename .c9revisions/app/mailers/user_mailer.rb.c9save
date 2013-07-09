@@ -1,0 +1,29 @@
+{"ts":1368697582214,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"class UserMailer < ActionMailer::Base\n  default from: \"from@example.com\"\n\n  # Subject can be set in your I18n file at config/locales/en.yml\n  # with the following lookup:\n  #\n  #   en.user_mailer.activation_needed_email.subject\n  #\n  def activation_needed_email\n    @greeting = \"Hi\"\n\n    mail to: \"to@example.org\"\n  end\n\n  # Subject can be set in your I18n file at config/locales/en.yml\n  # with the following lookup:\n  #\n  #   en.user_mailer.activation_success_email.subject\n  #\n  def activation_success_email\n    @greeting = \"Hi\"\n\n    mail to: \"to@example.org\"\n  end\n\n  # Subject can be set in your I18n file at config/locales/en.yml\n  # with the following lookup:\n  #\n  #   en.user_mailer.reset_password_email.subject\n  #\n  def reset_password_email\n    @greeting = \"Hi\"\n\n    mail to: \"to@example.org\"\n  end\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":814}]],"length":814}
+{"contributors":[],"silentsave":true,"ts":1368697582771,"patch":[[{"diffs":[[0,"needed_email"],[1,"(u)"],[0,"\n    @greeti"]],"start1":249,"start2":249,"length1":24,"length2":27}]],"length":817,"saved":false}
+{"ts":1368697583967,"patch":[[{"diffs":[[0,"d_email("],[-1,"u"],[0,")\n    @g"]],"start1":254,"start2":254,"length1":17,"length2":16}]],"length":816,"saved":false}
+{"ts":1368697584874,"patch":[[{"diffs":[[0,"d_email("],[1,"use"],[0,")\n    @g"]],"start1":254,"start2":254,"length1":16,"length2":19}]],"length":819,"saved":false}
+{"ts":1368697585863,"patch":[[{"diffs":[[0,"mail(use"],[1,"r"],[0,")\n    @g"]],"start1":257,"start2":257,"length1":16,"length2":17}]],"length":820,"saved":false}
+{"ts":1368697590626,"patch":[[{"diffs":[[0,"uccess_email"],[1,"(user)"],[0,"\n    @greeti"]],"start1":504,"start2":504,"length1":24,"length2":30}]],"length":826,"saved":false}
+{"ts":1368697593808,"patch":[[{"diffs":[[0,"rd_email"],[1,"(user)"],[0,"\n    @gr"]],"start1":755,"start2":755,"length1":16,"length2":22}]],"length":832,"saved":false}
+{"contributors":[],"silentsave":true,"ts":1372698283264,"patch":[[{"diffs":[[0,"\"\n  end\n"],[1,"  \n  \n"],[0,"end\n"]],"start1":820,"start2":820,"length1":12,"length2":18}]],"length":838,"saved":false}
+{"ts":1372698353782,"patch":[[{"diffs":[[0,"nd\n  \n  "],[1,"def "],[0,"\nend\n"]],"start1":825,"start2":825,"length1":13,"length2":17}]],"length":842,"saved":false}
+{"ts":1372698359541,"patch":[[{"diffs":[[0," \n  def "],[1,"subscription "],[0,"\nend\n"]],"start1":829,"start2":829,"length1":13,"length2":26}]],"length":855,"saved":false}
+{"ts":1372702060994,"patch":[[{"diffs":[[0,"cription"],[-1," "],[1,"()"],[0,"\nend\n"]],"start1":841,"start2":841,"length1":14,"length2":15}]],"length":856,"saved":false}
+{"ts":1372702062058,"patch":[[{"diffs":[[0,"ription("],[1,"user, "],[0,")\nend\n"]],"start1":842,"start2":842,"length1":14,"length2":20}]],"length":862,"saved":false}
+{"ts":1372702066774,"patch":[[{"diffs":[[0,"n(user, "],[-1,")"],[1,"subs)\n      "],[0,"\nend\n"]],"start1":848,"start2":848,"length1":14,"length2":25}]],"length":873,"saved":false}
+{"ts":1372702067979,"patch":[[{"diffs":[[0,")\n      "],[1,"en"],[0,"\nend\n"]],"start1":860,"start2":860,"length1":13,"length2":15}]],"length":875,"saved":false}
+{"ts":1372702069013,"patch":[[{"diffs":[[0,"bs)\n"],[-1,"    "],[0,"  en"],[1,"d"],[0,"\nend"]],"start1":858,"start2":858,"length1":16,"length2":13}]],"length":872,"saved":false}
+{"ts":1372702070291,"patch":[[{"diffs":[[0,", subs)\n"],[1,"      \n"],[0,"  end\nen"]],"start1":854,"start2":854,"length1":16,"length2":23}]],"length":879,"saved":false}
+{"ts":1372702073389,"patch":[[{"diffs":[[0,")\n      "],[1,"mail"],[0,"\n  end\ne"]],"start1":860,"start2":860,"length1":16,"length2":20}]],"length":883,"saved":false}
+{"ts":1372702073921,"patch":[[{"diffs":[[0,"    mail"],[1," "],[0,"\n  end\ne"]],"start1":864,"start2":864,"length1":16,"length2":17}]],"length":884,"saved":false}
+{"ts":1372702074824,"patch":[[{"diffs":[[0,"   mail "],[1,"to"],[0,"\n  end\ne"]],"start1":865,"start2":865,"length1":16,"length2":18}]],"length":886,"saved":false}
+{"ts":1372702075923,"patch":[[{"diffs":[[0," mail to"],[1,":"],[0,"\n  end\ne"]],"start1":867,"start2":867,"length1":16,"length2":17}]],"length":887,"saved":false}
+{"ts":1372702076953,"patch":[[{"diffs":[[0,"mail to:"],[1," use"],[0,"\n  end\ne"]],"start1":868,"start2":868,"length1":16,"length2":20}]],"length":891,"saved":false}
+{"ts":1372702078015,"patch":[[{"diffs":[[0," to: use"],[1,"r"],[0,"\n  end\ne"]],"start1":872,"start2":872,"length1":16,"length2":17}]],"length":892,"saved":false}
+{"ts":1372702080399,"patch":[[{"diffs":[[0,"to: user"],[1,".ema"],[0,"\n  end\ne"]],"start1":873,"start2":873,"length1":16,"length2":20}]],"length":896,"saved":false}
+{"ts":1372702081553,"patch":[[{"diffs":[[0,"user.ema"],[1,"il"],[0,"\n  end\ne"]],"start1":877,"start2":877,"length1":16,"length2":18}]],"length":898,"saved":false}
+{"ts":1372702096321,"patch":[[{"diffs":[[0,"ail to: "],[-1,"\"to@example.org\""],[1,"user.email"],[0,"\n  end\n\n"]],"start1":550,"start2":550,"length1":32,"length2":26}]],"length":892,"saved":false}
+{"ts":1372702101725,"patch":[[{"diffs":[[0,"ail to: "],[-1,"\"to@example.org\""],[1,"user"],[0,"\n  end\n "]],"start1":791,"start2":791,"length1":32,"length2":20}]],"length":880,"saved":false}
+{"ts":1372702102755,"patch":[[{"diffs":[[0,"to: user"],[1,".e"],[0,"\n  end\n "]],"start1":795,"start2":795,"length1":16,"length2":18}]],"length":882,"saved":false}
+{"ts":1372702104320,"patch":[[{"diffs":[[0,": user.e"],[1,"mail"],[0,"\n  end\n "]],"start1":797,"start2":797,"length1":16,"length2":20}]],"length":886,"saved":false}
+{"ts":1372759602908,"patch":[[{"diffs":[[0,"user"],[-1,", subs"],[0,")\n  "]],"start1":838,"start2":838,"length1":14,"length2":8}]],"length":880,"saved":false}

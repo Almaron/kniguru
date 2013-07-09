@@ -1,0 +1,8 @@
+{"ts":1368944573283,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"class BookTrack < ActiveRecord::Base\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":41}]],"length":41}
+{"contributors":[],"silentsave":true,"ts":1368944566326,"patch":[[{"diffs":[[0,"d::Base\n"],[1,"    \n"],[0,"end\n"]],"start1":29,"start2":29,"length1":12,"length2":17}]],"length":46,"saved":false}
+{"ts":1368944569739,"patch":[[{"diffs":[[0,"se\n    \n"],[1,"    belongs_to \n"],[0,"end\n"]],"start1":34,"start2":34,"length1":12,"length2":28}]],"length":62,"saved":false}
+{"ts":1368944571616,"patch":[[{"diffs":[[0,"ongs_to "],[1,":user\n    "],[0,"\nend\n"]],"start1":49,"start2":49,"length1":13,"length2":23}]],"length":72,"saved":false}
+{"ts":1368944572655,"patch":[[{"diffs":[[0,"ser\n    "],[1,"be"],[0,"\nend\n"]],"start1":59,"start2":59,"length1":13,"length2":15}]],"length":74,"saved":false}
+{"ts":1368944573734,"patch":[[{"diffs":[[0,"r\n    be"],[1,"longs"],[0,"\nend\n"]],"start1":61,"start2":61,"length1":13,"length2":18}]],"length":79,"saved":false}
+{"ts":1368944575487,"patch":[[{"diffs":[[0," belongs"],[1,"_to :"],[0,"\nend\n"]],"start1":66,"start2":66,"length1":13,"length2":18}]],"length":84,"saved":false}
+{"ts":1368944577531,"patch":[[{"diffs":[[0,"ngs_to :"],[1,"book\n    "],[0,"\nend\n"]],"start1":71,"start2":71,"length1":13,"length2":22}]],"length":93,"saved":false}

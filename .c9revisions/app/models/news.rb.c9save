@@ -1,0 +1,27 @@
+{"ts":1369376001494,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"class News < ActiveRecord::Base\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":36}]],"length":36}
+{"contributors":[],"silentsave":true,"ts":1369372394907,"patch":[[{"diffs":[[0,"d::Base\n"],[1,"    \n    \n"],[0,"end\n"]],"start1":24,"start2":24,"length1":12,"length2":22}]],"length":46,"saved":false}
+{"ts":1369373219114,"patch":[[{"diffs":[[0,"   \n    "],[1,"has_many :comments, :as "],[0,"\nend\n"]],"start1":33,"start2":33,"length1":13,"length2":37}]],"length":70,"saved":false}
+{"ts":1369373222486,"patch":[[{"diffs":[[0,"ts, :as "],[1,"=> :commentab"],[0,"\nend\n"]],"start1":57,"start2":57,"length1":13,"length2":26}]],"length":83,"saved":false}
+{"ts":1369373223548,"patch":[[{"diffs":[[0,"ommentab"],[1,"le"],[0,"\nend\n"]],"start1":70,"start2":70,"length1":13,"length2":15}]],"length":85,"saved":false}
+{"ts":1369373224694,"patch":[[{"diffs":[[0,"entable\n"],[1,"    \n"],[0,"end\n"]],"start1":73,"start2":73,"length1":12,"length2":17}]],"length":90,"saved":false}
+{"ts":1369373231108,"patch":[[{"diffs":[[0,"ble\n    "],[1,"mount_uploader :"],[0,"\nend\n"]],"start1":77,"start2":77,"length1":13,"length2":29}]],"length":106,"saved":false}
+{"ts":1369373233250,"patch":[[{"diffs":[[0,"loader :"],[1,"image, "],[0,"\nend\n"]],"start1":93,"start2":93,"length1":13,"length2":20}]],"length":113,"saved":false}
+{"ts":1369373234280,"patch":[[{"diffs":[[0,":image, "],[1,"New"],[0,"\nend\n"]],"start1":100,"start2":100,"length1":13,"length2":16}]],"length":116,"saved":false}
+{"ts":1369373235321,"patch":[[{"diffs":[[0,"age, New"],[1,"sU"],[0,"\nend\n"]],"start1":103,"start2":103,"length1":13,"length2":15}]],"length":118,"saved":false}
+{"ts":1369373238617,"patch":[[{"diffs":[[0,"e, NewsU"],[1,"ploader"],[0,"\nend\n"]],"start1":105,"start2":105,"length1":13,"length2":20}]],"length":125,"saved":false}
+{"contributors":[],"silentsave":true,"ts":1372759940057,"patch":[[{"diffs":[[0,"d::Base\n"],[1,"    \n    has_many :comments, :as => :commentable\n    \n    h\n    mount_uploader :image, NewsUploader\n"],[0,"end\n"]],"start1":24,"start2":24,"length1":12,"length2":112}]],"length":136,"saved":false}
+{"ts":1372759942098,"patch":[[{"diffs":[[0,"  \n    h"],[1,"as_many"],[0,"\n    mou"]],"start1":83,"start2":83,"length1":16,"length2":23}]],"length":143,"saved":false}
+{"ts":1372759943728,"patch":[[{"diffs":[[0,"has_many"],[1," Жен"],[0,"\n    mou"]],"start1":90,"start2":90,"length1":16,"length2":20}]],"length":147,"saved":false}
+{"ts":1372759945754,"patch":[[{"diffs":[[0,"any "],[-1,"Жен"],[1,":"],[0,"\n   "]],"start1":95,"start2":95,"length1":11,"length2":9}]],"length":145,"saved":false}
+{"ts":1372759947499,"patch":[[{"diffs":[[0,"s_many :"],[1,"tr"],[0,"\n    mou"]],"start1":92,"start2":92,"length1":16,"length2":18}]],"length":147,"saved":false}
+{"ts":1372759948346,"patch":[[{"diffs":[[0,"many :tr"],[1,"ac"],[0,"\n    mou"]],"start1":94,"start2":94,"length1":16,"length2":18}]],"length":149,"saved":false}
+{"ts":1372759949102,"patch":[[{"diffs":[[0,"ny :trac"],[1,"s "],[0,"\n    mou"]],"start1":96,"start2":96,"length1":16,"length2":18}]],"length":151,"saved":false}
+{"ts":1372759950968,"patch":[[{"diffs":[[0,"any :tra"],[-1,"c"],[1,"ks a"],[0,"s \n    m"]],"start1":95,"start2":95,"length1":17,"length2":20}]],"length":154,"saved":false}
+{"ts":1372759954507,"patch":[[{"diffs":[[0,"any :tra"],[1,"c"],[0,"ks as \n "]],"start1":95,"start2":95,"length1":16,"length2":17}]],"length":155,"saved":false}
+{"ts":1372759955860,"patch":[[{"diffs":[[0,"acks"],[-1," as "],[1,"б Ж"],[0,"\n   "]],"start1":102,"start2":102,"length1":12,"length2":11}]],"length":154,"saved":false}
+{"ts":1372759956801,"patch":[[{"diffs":[[0,"acks"],[-1,"б Ж"],[0,"\n   "]],"start1":102,"start2":102,"length1":11,"length2":8}]],"length":151,"saved":false}
+{"ts":1372759957596,"patch":[[{"diffs":[[0," :tracks"],[1,", "],[0,"\n    mou"]],"start1":98,"start2":98,"length1":16,"length2":18}]],"length":153,"saved":false}
+{"ts":1372759959704,"patch":[[{"diffs":[[0,"tracks, "],[1,":as => "],[0,"\n    mou"]],"start1":100,"start2":100,"length1":16,"length2":23}]],"length":160,"saved":false}
+{"ts":1372759961925,"patch":[[{"diffs":[[0," :as => "],[1,":tracka"],[0,"\n    mou"]],"start1":107,"start2":107,"length1":16,"length2":23}]],"length":167,"saved":false}
+{"ts":1372759963358,"patch":[[{"diffs":[[0," :tracka"],[1,"ble"],[0,"\n    mou"]],"start1":114,"start2":114,"length1":16,"length2":19}]],"length":170,"saved":false}
+{"ts":1372759964610,"patch":[[{"diffs":[[0,":commentable"],[-1,"\n"],[0,"    \n    has"]],"start1":68,"start2":68,"length1":25,"length2":24},{"diffs":[[0,"ackable\n"],[1,"    \n"],[0,"    moun"]],"start1":117,"start2":117,"length1":16,"length2":21}]],"length":174,"saved":false}

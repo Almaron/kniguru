@@ -1,0 +1,1 @@
+{"ts":1368476823076,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"# Be sure to restart your server when you modify this file.\n\n# Configure sensitive parameters which will be filtered from the log file.\nRails.application.config.filter_parameters += [:password]\n"]],"start1":0,"start2":0,"length1":0,"length2":194}]],"length":194}

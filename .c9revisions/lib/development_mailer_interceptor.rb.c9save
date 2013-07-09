@@ -1,0 +1,2 @@
+{"ts":1368694525080,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":true,"ts":1368694518721,"patch":[[{"diffs":[[1,"class DevelopmentMailInterceptor\n\n  def self.delivering_email(message)\n    message.subject = \"#{message.to} #{message.subject}\"\n    message.to = \"almaron@gmail.com\"\n  end\n\nend"]],"start1":0,"start2":0,"length1":0,"length2":175}]],"length":175,"saved":false}
