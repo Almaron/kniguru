@@ -1,4 +1,46 @@
-Kniguru::Application.routes.draw do
+Kniguru::Application.routes.draw do     
+
+
+  get "subscriptions/edit"
+  get "subscriptions/update"
+  resources :news
+
+  get "auth/oauth"    => "authentications#new", :as => "auth"
+  get "auth/callback" => "authentications#create"
+  get "auth/:id/destroy" => "authentications#destroy", :as => "destroy_auth"
+  
+  get  "login"  =>  "sessions#new",     :as => :login
+  post "login"  =>  "sessions#create"
+  get  "logout" =>  "sessions#destroy", :as => :logout
+  
+  resources :users do
+      collection do 
+         get :password_ask_email
+         post :send_password_reset
+         post :reset_password
+         get "reset_password" => "users#password_reset_form"
+      end
+      member do
+          get :activate          
+      end      
+  end
+  
+  resources :books do
+      collection do
+          get :rating
+          get :search
+      end
+      
+      member do
+          post :rate
+      end
+  end
+  
+  resources :seasons
+  
+  resources :comments, :only => [:create, :edit, :update, :destroy]
+  
+  resources :badges, :except => [:new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
