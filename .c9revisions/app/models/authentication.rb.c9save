@@ -1,5 +1,0 @@
-{"ts":1372438022351,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"class Authentication < ActiveRecord::Base\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":46}]],"length":46}
-{"contributors":[],"silentsave":true,"ts":1372438023644,"patch":[[{"diffs":[[0,"d::Base\n"],[1,"    \n    \n"],[0,"end\n"]],"start1":34,"start2":34,"length1":12,"length2":22}]],"length":56,"saved":false}
-{"ts":1372438027189,"patch":[[{"diffs":[[0,"se\n    \n"],[1,"    belongs_to:use\n"],[0,"    \nend"]],"start1":39,"start2":39,"length1":16,"length2":35}]],"length":75,"saved":false}
-{"ts":1372438028314,"patch":[[{"diffs":[[0,"s_to:use"],[1,"r"],[0,"\n    \nen"]],"start1":57,"start2":57,"length1":16,"length2":17}]],"length":76,"saved":false}
-{"ts":1372438031551,"patch":[[{"diffs":[[0,"longs_to"],[1," "],[0,":user\n  "]],"start1":53,"start2":53,"length1":16,"length2":17}]],"length":77,"saved":false}

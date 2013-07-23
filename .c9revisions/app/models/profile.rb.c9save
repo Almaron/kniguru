@@ -1,4 +1,0 @@
-{"ts":1368699099951,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"class Profile < ActiveRecord::Base\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":39}]],"length":39}
-{"contributors":[],"silentsave":true,"ts":1368699095399,"patch":[[{"diffs":[[0,"d::Base\n"],[1,"    \n    \n    \n"],[0,"end\n"]],"start1":27,"start2":27,"length1":12,"length2":27}]],"length":54,"saved":false}
-{"ts":1368699096246,"patch":[[{"diffs":[[0,"se\n    \n    "],[1,"be"],[0,"\n    \nend\n"]],"start1":32,"start2":32,"length1":22,"length2":24}]],"length":56,"saved":false}
-{"ts":1368699100106,"patch":[[{"diffs":[[0," \n    be"],[1,"longs_to :user"],[0,"\n    \nen"]],"start1":38,"start2":38,"length1":16,"length2":30}]],"length":70,"saved":false}

@@ -1,3 +1,0 @@
-{"ts":1372780780874,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"class SubscriptionsController < ApplicationController\n  def edit\n  end\n\n  def update\n  end\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":95}]],"length":95}
-{"contributors":[],"silentsave":true,"ts":1372780779621,"patch":[[{"diffs":[[0,"troller\n"],[1,"    \n"],[0,"  def ed"]],"start1":46,"start2":46,"length1":16,"length2":21}]],"length":100,"saved":false}
-{"ts":1372780781666,"patch":[[{"diffs":[[0,"e\n  end\n"],[1,"  \n"],[0,"end\n"]],"start1":88,"start2":88,"length1":12,"length2":15}]],"length":103,"saved":false}

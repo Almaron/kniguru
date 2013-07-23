@@ -1,7 +1,0 @@
-{"ts":1368476819350,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
-{"contributors":[],"silentsave":false,"ts":1368693496825,"patch":[[{"diffs":[[1,"require 'yaml'\nconfig = Yaml.load_from_file(Rails.root.join('config','app_config.yml'))\n\nAPP_CONFIG = config.deep_simbolize_keys"]],"start1":0,"start2":0,"length1":0,"length2":128}]],"length":128,"saved":false}
-{"ts":1368693536105,"patch":[[{"diffs":[[-1,"require 'yaml'\n"],[0,"conf"]],"start1":0,"start2":0,"length1":19,"length2":4}]],"length":113,"saved":false}
-{"ts":1368693547729,"patch":[[{"diffs":[[0," = Y"],[-1,"aml"],[1,"AML"],[0,".loa"]],"start1":6,"start2":6,"length1":11,"length2":11}]],"length":113,"saved":false}
-{"contributors":[],"silentsave":false,"ts":1368693726194,"patch":[[{"diffs":[[-1,"config"],[1,"APP_CONFIG"],[0," = YAML."]],"start1":0,"start2":0,"length1":14,"length2":18},{"diffs":[[0,"l'))"],[-1,"\n\nAPP_CONFIG = config"],[0,".dee"]],"start1":72,"start2":72,"length1":29,"length2":8},{"diffs":[[0,"ize_keys"],[1,"!"]],"start1":88,"start2":88,"length1":8,"length2":9}]],"length":97,"saved":false}
-{"ts":1368693877575,"patch":[[{"diffs":[[0,"oad_"],[-1,"from_"],[0,"file"]],"start1":19,"start2":19,"length1":13,"length2":8}]],"length":92,"saved":false}
-{"ts":1368693907914,"patch":[[{"diffs":[[0,").deep_s"],[-1,"i"],[1,"y"],[0,"mbolize_"]],"start1":70,"start2":70,"length1":17,"length2":17}]],"length":92,"saved":false}

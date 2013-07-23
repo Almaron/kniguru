@@ -1,7 +1,0 @@
-{"ts":1368716354096,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"class Season < ActiveRecord::Base\nend\n"]],"start1":0,"start2":0,"length1":0,"length2":38}]],"length":38}
-{"contributors":[],"silentsave":true,"ts":1368716349617,"patch":[[{"diffs":[[0,"d::Base\n"],[1,"    \n    \n"],[0,"end\n"]],"start1":26,"start2":26,"length1":12,"length2":22}]],"length":48,"saved":false}
-{"ts":1368716351403,"patch":[[{"diffs":[[0,"se\n    \n"],[1,"    has\n"],[0,"    \nend"]],"start1":31,"start2":31,"length1":16,"length2":24}]],"length":56,"saved":false}
-{"ts":1368716352599,"patch":[[{"diffs":[[0,"\n    has"],[1,"_man"],[0,"\n    \nen"]],"start1":38,"start2":38,"length1":16,"length2":20}]],"length":60,"saved":false}
-{"ts":1368716354351,"patch":[[{"diffs":[[0," has_man"],[1,"y :"],[0,"\n    \nen"]],"start1":42,"start2":42,"length1":16,"length2":19}]],"length":63,"saved":false}
-{"ts":1368716356480,"patch":[[{"diffs":[[0,"s_many :"],[1,"bo"],[0,"\n    \nen"]],"start1":45,"start2":45,"length1":16,"length2":18}]],"length":65,"saved":false}
-{"ts":1368716357880,"patch":[[{"diffs":[[0,"many :bo"],[1,"oks"],[0,"\n    \nen"]],"start1":47,"start2":47,"length1":16,"length2":19}]],"length":68,"saved":false}
