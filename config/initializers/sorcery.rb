@@ -253,7 +253,7 @@ Rails.application.config.sorcery.configure do |config|
     # manually handle how and when email is sent.
     # Default: `false`
     #
-    # user.activation_mailer_disabled =
+    # user.activation_mailer_disabled = true
 
 
     # activation needed email method on your mailer class.
@@ -310,7 +310,7 @@ Rails.application.config.sorcery.configure do |config|
     # manually handle how and when email is sent
     # Default: `false`
     #
-    # user.reset_password_mailer_disabled =
+    # user.reset_password_mailer_disabled = true
 
 
     # how many seconds before the reset request expires. nil for never expires.
@@ -423,4 +423,15 @@ Rails.application.config.sorcery.configure do |config|
   # This line must come after the 'user config' block.
   # Define which model authenticates with sorcery.
   config.user_class = "User"
+end
+
+module Sorcery
+  module Model
+    module InstanceMethods
+      def generic_send_email(method, mailer)
+        config = sorcery_config
+        mail = config.send(mailer).delay.send(config.send(method), self)
+      end
+    end
+  end
 end

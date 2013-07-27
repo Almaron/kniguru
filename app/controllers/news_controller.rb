@@ -4,6 +4,7 @@ class NewsController < ApplicationController
 
   def index
     @news = News.all
+    render :layout => "admin"
   end
 
 
@@ -41,8 +42,7 @@ class NewsController < ApplicationController
 
   def destroy
     @news.destroy
-       redirect_to news_index_path
-    end
+    redirect_to news_index_path
   end
 
   private

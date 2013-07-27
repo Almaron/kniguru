@@ -8,12 +8,14 @@ gem 'sqlite3'
 
 #Auth 
 gem 'sorcery'
+gem 'mysql2'
 
 gem "haml-rails"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
-gem 'compass-rails'
+#gem 'compass-rails'
+gem 'zurb-foundation'
 
 gem 'fancybox2-rails'
 
@@ -43,6 +45,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem "sidekiq"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -52,12 +56,24 @@ gem 'carrierwave'
 gem 'whenever'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
+gem 'puma'
 # Use Capistrano for deployment
 group :development do
   gem 'capistrano'
   gem "rvm-capistrano"
+end
+
+group :development, :test do
+  gem 'debugger'
+  gem "rspec-rails"
+  gem 'rb-inotify', '~> 0.9'
+  gem "factory_girl_rails"
+  gem "guard-rspec"
+  gem "guard-rails"
+  gem "guard-livereload"
+  gem "rack-livereload"
 end
 
 
