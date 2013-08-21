@@ -25,11 +25,16 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.find_by(:page_alias => params[:id])
   end
 
   def update
-    @page = Page.find(params[:id])
+    @page = Page.find_by(:page_alias => params[:id])
+    if @page.update(page_params)
+      redirect_to "/pages/#{@page.page_alias}"
+    else
+      render :edit
+    end
   end
 
   def destroy
