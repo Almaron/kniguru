@@ -17,6 +17,8 @@ class PagesController < ApplicationController
   end
 
   def create
+    @page = Page.create(page_params)
+    redirect_to "/pages/#{@page.page_alias}"
   end
 
   def edit
@@ -29,6 +31,13 @@ class PagesController < ApplicationController
 
   def destroy
     @page = Page.find(params[:id])
-    @page.destroy redirect_to pages_path
+    @page.destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def page_params
+    params.require(:page).permit(:title, :head, :content, :page_alias)
   end
 end
