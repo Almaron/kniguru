@@ -9,7 +9,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 set :use_sudo, false
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
-set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
+set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
 
 set :rvm_ruby_string, '2.0.0-p247@kniguru'
 set :bundle_dir, ''
@@ -33,11 +33,21 @@ require 'sidekiq/capistrano'
 # Далее идут правила для перезапуска unicorn. Их стоит просто принять на веру - они работают.
 # В случае с Rails 3 приложениями стоит заменять bundle exec unicorn_rails на bundle exec unicorn
 namespace :deploy do
-  %w[start stop restart].each do |command|
-    desc "#{command} unicorn server"
-    task command, roles: :app, except: {no_release: true} do
-      run "sudo /etc/init.d/unicorn_#{application} #{command}"
-    end
+  #%w[start stop restart].each do |command|
+  #  desc "#{command} unicorn server"
+  #  task command, roles: :app, except: {no_release: true} do
+  #    run "sudo /etc/init.d/unicorn_#{application} #{command}"
+  #  end
+  #end
+
+  task :restart do
+    run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -USR2 `cat #{unicorn_pid}`; else cd #{deploy_to}/current && bundle exec unicorn -D -c #{unicorn_conf} -E #{rails_env} -D; fi"
+  end
+  task :start do
+    run "bundle exec unicorn -c #{unicorn_conf} -E #{rails_env} -D"
+  end
+  task :stop do
+    run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
   end
 
   task :setup_config, roles: :app do

@@ -2,7 +2,7 @@ class WritingsController < ApplicationController
   before_action :set_writing, only: [:show, :edit, :update, :destroy]
 
   def index
-    @writings = Writing.paginate(:page => params[:page], :per_page => 10)
+    @writings = Writing.paginate(:page => params[:page], :per_page => 5)
   end
 
   def show

@@ -2,7 +2,7 @@ class PressesController < ApplicationController
   before_action :set_press, only: [:show, :edit, :update, :destroy]
 
   def index
-    @presses = Press.paginate(:page => params[:page], :per_page => 10)
+    @presses = Press.paginate(:page => params[:page], :per_page => 5)
   end
 
   def show
