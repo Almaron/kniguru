@@ -11,7 +11,7 @@
 }
 
 body {
-  background: white url('city.jpg') no-repeat center 213px;
+  background: white image-url('city.jpg') no-repeat center 213px;
   color: #000000;
   font-size: 13px;
   font-family: Corbel, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
@@ -149,7 +149,7 @@ h3.green {
   width: 160px;
   height: 160px;
   background: white no-repeat center center;
-  background-image: url('logo.jpg');
+  background-image: image-url('logo.jpg');
   border: 1px solid #e5e5e5;
   box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.1);
