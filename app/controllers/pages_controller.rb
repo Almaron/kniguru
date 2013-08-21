@@ -3,7 +3,6 @@ class PagesController < ApplicationController
   end
 
   def show
-    debugger
     if params[:main]
       render :text => "", :layout => "root"
     else
