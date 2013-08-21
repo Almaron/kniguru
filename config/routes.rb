@@ -1,5 +1,4 @@
-Kniguru::Application.routes.draw do     
-
+Kniguru::Application.routes.draw do
 
   get "subscriptions/edit"
   get "subscriptions/update"
@@ -27,25 +26,33 @@ Kniguru::Application.routes.draw do
   
   resources :books do
       collection do
-          get :rating
-          get :search
+        get :rating
+        get :search
+        get :short_list
       end
-      
       member do
           post :rate
       end
   end
+
+  resources :pages, :except => [:index]
+
+  resources :presses, :path => "press"
+  resources :writings
+  resources :experts
   
   resources :seasons
   
   resources :comments, :only => [:create, :edit, :update, :destroy]
   
   resources :badges, :except => [:new]
+
+  resources :reviews
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'pages#show', :main => true
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

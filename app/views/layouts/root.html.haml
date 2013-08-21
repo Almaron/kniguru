@@ -1,0 +1,49 @@
+!!!
+/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7 ] <html class="ie6" lang="en">
+/[if IE 7 ] <html class="ie7" lang="en">
+/[if IE 8 ] <html class="ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  = render :partial => 'head'
+  %body
+    .wrapper
+      = render :partial => 'top'
+      .main.clearfix
+        .in.main-in
+          .middle.clearfix
+            .notbox
+              .notbox-arrow
+              .notbox-up
+                %h3 Всероссийский конкурс
+                .text
+                  на лучшее литературное произведение для детей и юношенства
+              .notbox-down
+                %span.big 2013
+                1 июля - 31 июля
+            .socnet
+              %div
+                %span.green-big Мы в социальных сетях:
+                %a.round-button.tw{:href => "http://twitter.com/#!/KNIGURU"}
+                %a.round-button.lj{:href => "http://community.livejournal.com/kniguru/"}
+                %a.round-button.vk{:href => "http://vkontakte.ru/club29690692"}
+                %a.round-button.fb{:href => "http://www.facebook.com/pages/%D0%92%D1%81%D0%B5%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9-%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81-%D0%9A%D0%BD%D0%B8%D0%B3%D1%83%D1%80%D1%83/235427816498652"}
+          .latest-news.greengrad2.clearfix
+            .latest-news-tt
+              Последние новости
+            = last_news_link
+
+          .separated.clearfix
+            .separated-big
+              .lastcomments
+                .bigtitle.greengrad Последние комментарии
+                - last_comments_root.each do |comment|
+                  %div
+          .separated-side
+            .box.box-news{:style => "margin-top:-85px;"}
+              %h3.green Новости
+              .news-one
+                = last_news_root.join("<hr>").html_safe
+
+      = render :partial => 'footer'

@@ -1,0 +1,25 @@
+.top
+  .in.top-in
+    %a.logo{:href => "/"} Книгуру
+    %ul.top-menu
+      %li
+        %a{:href => "/pages/whatis.html"} Что такое &laquo;Книгуру&raquo;?
+      %li
+        = link_to "Короткий список", short_list_books_path
+      %li
+        = link_to "Новости", news_index_path
+    .top-enter
+      %a.popup{:href => "/login"} Войти
+      %span.sep
+      %a.popup{:href => "/register"} Зарегистрироваться
+.topline.greengrad
+  .in.topline-in
+    %ul.topline-menu
+      %li
+        %a{:href => "/pages/ask_question"} Задать вопрос автору
+      %li
+        %a{:href => "/reviews/new"} Отправить рецензию
+      %li
+        %a{:href => "/pages/top_list"} Доска почета
+      %li
+        = link_to "Прошлые сезоны", seasons_path

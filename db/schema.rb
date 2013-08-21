@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130627180111) do
+ActiveRecord::Schema.define(version: 20130821144617) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id",    null: false
@@ -64,7 +64,10 @@ ActiveRecord::Schema.define(version: 20130627180111) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "bookmate_id"
+    t.integer  "short_list",  default: 0
   end
+
+  add_index "books", ["short_list"], name: "index_books_on_short_list"
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
@@ -74,10 +77,16 @@ ActiveRecord::Schema.define(version: 20130627180111) do
     t.integer  "mark"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "approved",         default: 0
   end
 
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
+  create_table "experts", force: true do |t|
+    t.string "name"
+    t.text   "content"
+  end
 
   create_table "news", force: true do |t|
     t.string   "head"
@@ -87,8 +96,41 @@ ActiveRecord::Schema.define(version: 20130627180111) do
     t.datetime "updated_at"
   end
 
+  create_table "pages", force: true do |t|
+    t.string   "title"
+    t.string   "head"
+    t.string   "page_alias"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pages", ["page_alias"], name: "index_pages_on_page_alias", unique: true
+
+  create_table "presses", force: true do |t|
+    t.string   "head"
+    t.text     "content"
+    t.string   "paper_name"
+    t.string   "paper_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "published_on"
+  end
+
+  add_index "presses", ["published_on"], name: "index_presses_on_published_on"
+
   create_table "profiles", force: true do |t|
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reviews", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "book_id"
+    t.string   "head"
+    t.text     "content"
+    t.integer  "approved"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -149,5 +191,17 @@ ActiveRecord::Schema.define(version: 20130627180111) do
   add_index "users", ["activation_token"], name: "index_users_on_activation_token"
   add_index "users", ["remember_me_token"], name: "index_users_on_remember_me_token"
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token"
+
+  create_table "writings", force: true do |t|
+    t.string   "head"
+    t.text     "content"
+    t.string   "paper_name"
+    t.string   "paper_url"
+    t.date     "published_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "writings", ["published_on"], name: "index_writings_on_published_on"
 
 end

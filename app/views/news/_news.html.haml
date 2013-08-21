@@ -1,0 +1,5 @@
+.one_news{:id => "news#{news.id}"}
+  .news_date
+    = l news.created_at
+  .news_head
+    = link_to news.head, news

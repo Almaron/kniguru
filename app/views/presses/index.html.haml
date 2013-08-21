@@ -1,0 +1,10 @@
+- content_for :title do
+  Пресса о нас
+
+- content_for :pagetitle do
+  Пресса о нас
+
+= render @presses
+
+.navigation
+  = will_paginate @presses

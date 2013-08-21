@@ -1,0 +1,8 @@
+- content_for :pagetitle do
+  Edit page
+
+= render 'form'
+.form_links
+  = link_to 'Show', @page
+  |
+  = link_to 'Back', news_index_path

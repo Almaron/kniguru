@@ -4,7 +4,10 @@ class Comment < ActiveRecord::Base
     belongs_to :commentable, :polymorphic => true
     
     after_create :new_comment
-    
+
+    scope :approved, -> {where(:approved => 1)}
+    scope :moderated, -> {where(:approved => 0)}
+
     def self.search(search_string)
     end
     

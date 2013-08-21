@@ -1,0 +1,8 @@
+- content_for :title do
+  = @page.title
+
+- content_for :pagetitle do
+  = @page.head
+
+.inner-container-content
+  = @page.content.html_safe

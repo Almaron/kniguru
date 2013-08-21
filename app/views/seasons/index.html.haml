@@ -1,0 +1,11 @@
+- content_for :title do
+  Сезоны конкурса
+
+- content_for :pagetitle do
+  Прошлые сезоны
+
+= render @seasons
+
+- if @seasons.empty?
+  .inner-container-content
+    Сезоны не загружены

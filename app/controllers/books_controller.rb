@@ -25,6 +25,10 @@ class BooksController < ApplicationController
   def edit
   end
 
+  def short_list
+    @books = current_season ? current_season.books.short_list : []
+  end
+
   def update
       if @book.update(book_params)
           redirect_to @book, :notice => "Update success"

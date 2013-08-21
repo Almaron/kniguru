@@ -1,0 +1,16 @@
+= form_for @page do |f|
+  .form_line
+    = f.label :title
+    = f.text_field :title
+  .form_line
+    = f.label :head
+    = f.text_field :head
+  .form_line
+    = f.label :page_alias
+    = f.text_field :page_alias
+  .form_line
+    = f.label :content
+    %br
+    = f.text_area :content, :class => "tinymce"
+  .form_line
+    = f.submit

@@ -1,0 +1,10 @@
+= form_for @expert do |f|
+  .form_line
+    = f.label :name
+    = f.text_field :name
+  .form_line
+    = f.label :content
+    %br
+    = f.text_area :content, :class => "tinymce"
+  .form_line
+    = f.submit

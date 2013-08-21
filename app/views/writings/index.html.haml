@@ -1,0 +1,10 @@
+- content_for :title do
+  О нас пишут
+
+- content_for :pagetitle do
+  О нас пишут
+
+= render @writings
+
+.navigation
+  = will_paginate @writings

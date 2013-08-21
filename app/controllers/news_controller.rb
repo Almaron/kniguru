@@ -1,17 +1,13 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @news = News.all
-    render :layout => "admin"
   end
-
 
   def show
-      @comment = @news.comments.new
+    #@comment = @news.comments.new
   end
-
 
   def new
     @news = News.new

@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.formText {
+    font-size: 100%;
+    padding: 0;
+}
+input {
+    z-index: expression(
+runtimeStyle.zIndex = 1,
+type == "text" ? (className += " formText") : 0,
+type == "password" ? (className += " formText") : 0
+)
+}

@@ -1,0 +1,11 @@
+- content_for :title do
+  Короткий список
+
+- content_for :pagetitle do
+  Короткий список
+
+= render @books
+
+- if @books.empty?
+  .inner-container-content
+    Нет подходящих книг.

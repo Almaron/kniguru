@@ -1,0 +1,14 @@
+- content_for :title do
+  Пресса о нас
+
+- content_for :pagetitle do
+  = @press.head
+
+.inner-container-content
+  .small_date
+    = l @press.published_on
+
+.innerbox
+  = simple_format @press.content
+  .press_paper_link
+    = link_to @press.paper_name, @press.paper_url

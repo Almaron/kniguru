@@ -1,0 +1,11 @@
+- content_for :title do
+  Рецензии
+
+- content_for :pagetitle do
+  Рецензии
+
+= render @reviews
+
+- if @reviews.empty?
+  .inner-container-content
+    Нет доступных рецензий

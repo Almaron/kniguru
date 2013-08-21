@@ -1,0 +1,14 @@
+- content_for :title do
+  О нас пишут
+
+- content_for :pagetitle do
+  = @writing.head
+
+.inner-container-content
+  .small_date
+    = l @writing.published_on
+
+.innerbox
+  = @writing.content.html_safe
+  .press_paper_link
+    = link_to @writing.paper_name, @writing.paper_url

@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery! do |config|
     config.authentications_class = Authentication
   end
+
+  mount_uploader :avatar, AvatarUploader
   
   has_many :books
   has_one  :profile
@@ -27,7 +29,7 @@ class User < ActiveRecord::Base
   end
   
   def static_badge(*options)
-      @badge = self.badges.new options 
+      @badge = self.badges.new(options)
       @badge.type = "static"
       @badge.save
   end
