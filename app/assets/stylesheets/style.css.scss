@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: Corbel;
-  src: url('corbel/corbel.eot');
-  src: local('☺'), url('corbel/corbel.woff') format('woff'), url('corbel/corbel.ttf') format('truetype'), url('corbel/corbel.svg') format('svg');
+  src: font-url('corbel/corbel.eot');
+  src: local('☺'), font-url('corbel/corbel.woff') format('woff'), font-url('corbel/corbel.ttf') format('truetype'), font-url('corbel/corbel.svg') format('svg');
 }
 
 body {
@@ -847,6 +847,7 @@ h3.green {
     color: #902790;
     padding-bottom: 40px;
     font-weight: normal;
+    line-height: normal;
   }
   h2 {
     font-family: Comfortaa, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
