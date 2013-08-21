@@ -839,7 +839,7 @@ h3.green {
     font-family: Comfortaa, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
     font-size: 24px;
     color: #902790;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
     font-weight: normal;
     line-height: normal;
   }
@@ -1243,4 +1243,8 @@ textarea.inp {
   font-size: 17px;
   text-align: justify;
   line-height: 19px;
+}
+
+.small_date {
+  color: grey;
 }

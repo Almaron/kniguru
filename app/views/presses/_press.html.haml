@@ -4,6 +4,6 @@
   .content
     = press.head
     %br
-    = simple_format "#{press.content.sub(/^(.{40}.*?)\s.*$/,"\\1")}[...]"
+    = simple_format "#{press.content.slice(/\A(.{200}.*?)\s/)}[...]"
   .small_date
     = l press.published_on
