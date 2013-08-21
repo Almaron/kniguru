@@ -29,7 +29,7 @@ class PagesController < ApplicationController
   end
 
   def update
-    @page = Page.find_by(:page_alias => params[:id])
+    @page = Page.find(params[:id])
     if @page.update(page_params)
       redirect_to "/pages/#{@page.page_alias}"
     else
