@@ -8,10 +8,13 @@ old_pid    = pid_file + '.oldbin'
 
 timeout 30
 worker_processes 6 # Здесь тоже в зависимости от нагрузки, погодных условий и текущей фазы луны
-listen socket_file, :backlog => 1024
+#listen socket_file, :backlog => 1024
+listen "/tmp/unicorn.kniguru.sock" , :backlog => 1024
 pid pid_file
 stderr_path err_log
 stdout_path log_file
+working_directory rails_root
+
 
 preload_app true # Мастер процесс загружает приложение, перед тем, как плодить рабочие процессы.
 
