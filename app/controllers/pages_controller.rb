@@ -16,8 +16,12 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = Page.create(page_params)
-    redirect_to "/pages/#{@page.page_alias}"
+    @page = Page.new(page_params)
+    if @page.save
+      redirect_to "/pages/#{@page.page_alias}"
+    else
+      render :new
+    end
   end
 
   def edit
