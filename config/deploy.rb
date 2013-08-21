@@ -20,7 +20,6 @@ require 'rvm/capistrano'
 set :scm, :git
 set :repository,  "https://github.com/Almaron/kniguru.git"
 set :branch, "master"
-set :deploy_via, :remote_cache
 
 
 default_run_options[:pty] = true
@@ -37,7 +36,7 @@ namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, roles: :app, except: {no_release: true} do
-      run "/etc/init.d/unicorn_#{application} #{command}"
+      run "sudo /etc/init.d/unicorn_#{application} #{command}"
     end
   end
 
@@ -73,5 +72,9 @@ namespace :deploy do
   end
   before "deploy", "deploy:check_revision"
 
+  task :chown do
+    run "chown -R rails:nginx #{current_path}"
+  end
+  after "deploy", "deploy:chown"
 
 end
