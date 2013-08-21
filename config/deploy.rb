@@ -2,7 +2,7 @@
 require 'bundler/capistrano' # Для работы bundler. При изменении гемов bundler автоматически обновит все гемы на сервере, чтобы они в точности соответствовали гемам разработчика. 
 
 server "66.225.201.127", :web, :app, :db, primary: true
-set :application, "models"
+set :application, "kniguru"
 set :user, "rails"
 set :deploy_to, "/home/#{user}/www/#{application}"
 set :deploy_via, :remote_cache
