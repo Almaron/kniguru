@@ -19,12 +19,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: kniguru
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: root
-  password: bookbig
-  host:  localhost
-  socket: /var/lib/mysql/mysql.sock
+  timeout: 5000

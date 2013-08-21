@@ -320,12 +320,12 @@ h3.green {
 }
 
 .notbox-arrow {
-  background: url('notbox-arrow.png') no-repeat 55px 1px;
+  background: image-url('notbox-arrow.png') no-repeat 55px 1px;
   height: 28px;
 }
 
 .notbox-up {
-  background: url('gradient-violet.png') repeat-y 0 0;
+  background: image-url('gradient-violet.png') repeat-y 0 0;
   padding: 20px;
   border: 1px solid #e5e5e5;
   border-bottom: 0;
@@ -340,7 +340,7 @@ h3.green {
 }
 
 .notbox-down {
-  background: url('gradient-darkviolet.png') repeat-y 0 0;
+  background: image-url('gradient-darkviolet.png') repeat-y 0 0;
   padding: 10px 20px;
   border: 1px solid #e5e5e5;
   border-top: 0;
@@ -439,7 +439,7 @@ h3.green {
   width: 161px;
   height: 75px;
   padding: 18px 0 0 20px;
-  background: url('violetarrow.png') no-repeat 0 0;
+  background: image-url('violetarrow.png') no-repeat 0 0;
 }
 
 .latest-news-date {
@@ -725,7 +725,7 @@ h3.green {
   height: 40px;
   span {
     cursor: pointer;
-    background-image: url(url('slider-arrows.png'));
+    background-image: image-url('slider-arrows.png');
     background-repeat: no-repeat;
     width: 22px;
     height: 40px;
@@ -838,7 +838,7 @@ h3.green {
   -o-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
   margin-right: 45px;
   &.cyan {
-    background: url('cyan.png');
+    background: image-url('cyan.png');
     background-color: transparent;
   }
   h1 {
@@ -858,7 +858,7 @@ h3.green {
 }
 
 .innerbox {
-  background: url('violet.png');
+  background: image-url('violet.png');
   border: 1px solid #f0f0f0;
   padding: 40px;
   color: #000000;
@@ -954,7 +954,7 @@ input {
     float: left;
   }
   &[type="checkbox"] + label > span, &[type="radio"] + label > span {
-    background-image: url('checkradio.png');
+    background-image: image-url('checkradio.png');
     background-repeat: no-repeat;
     display: block;
     width: 16px;
@@ -1038,7 +1038,7 @@ textarea.inp {
   width: 27px;
   height: 26px;
   border: 1px solid #8e429d;
-  background: white url('arrowdown.png') center center no-repeat;
+  background: white image-url('arrowdown.png') center center no-repeat;
   cursor: pointer;
   &:hover {
     background-color: #f0f0f0;
@@ -1131,7 +1131,7 @@ textarea.inp {
   height: 16px;
   display: block;
   cursor: pointer;
-  background: url('edit.png') 0 0 no-repeat;
+  background: image-url('edit.png') 0 0 no-repeat;
   &:hover {
     opacity: 0.8;
   }
@@ -1148,7 +1148,7 @@ textarea.inp {
 }
 
 .badge {
-  background: url('badge-bg.png') center center no-repeat;
+  background: image-url('badge-bg.png') center center no-repeat;
   width: 152px;
   height: 142px;
   padding-top: 10px;
@@ -1176,7 +1176,7 @@ textarea.inp {
   width: 122px;
   height: 122px;
   position: relative;
-  background: url('badge-center.png') no-repeat 1px 0;
+  background: image-url('badge-center.png') no-repeat 1px 0;
   margin: 4px auto;
   text-align: center;
   color: #f9fdf7;
