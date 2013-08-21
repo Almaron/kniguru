@@ -22,9 +22,6 @@ set :repository,  "https://github.com/Almaron/kniguru.git"
 set :branch, "master"
 set :deploy_via, :remote_cache
 
-role :web, domain
-role :app, domain
-role :db,  domain, :primary => true
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
