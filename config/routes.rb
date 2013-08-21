@@ -35,7 +35,7 @@ Kniguru::Application.routes.draw do
       end
   end
 
-  resources :pages, :except => [:index]
+  resources :pages
 
   resources :presses, :path => "press"
   resources :writings

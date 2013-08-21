@@ -1,4 +1,7 @@
 - content_for :pagetitle do
-  Pages
+  Служебные страницы сайта
 
-.
+.inner-container-content
+  - @pages.each do |page|
+    .one_page
+      = link_to page.head, "/pages/#{page.page_alias}"
