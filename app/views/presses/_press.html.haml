@@ -1,7 +1,9 @@
 .innerbox.innerbox_list
-  %h2 = link_to press.paper_name, press
+  %h2
+    = link_to press.paper_name, press
   .content
     = press.head
     %br
     = simple_format "#{press.content.sub(/^(.{100}.*?)\s.*$/,"\\1")}[...]"
-  .small_date = l press.published_on
+  .small_date
+    = l press.published_on
