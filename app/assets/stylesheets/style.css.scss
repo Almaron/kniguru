@@ -2,13 +2,7 @@
 
 /* BASE STYLES*/
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Comfortaa&subset=latin,cyrillic-ext,cyrillic);
 
-@font-face {
-  font-family: Corbel;
-  src: font-url('corbel/corbel.eot');
-  src: local('☺'), font-url('corbel/corbel.woff') format('woff'), font-url('corbel/corbel.ttf') format('truetype'), font-url('corbel/corbel.svg') format('svg');
-}
 
 body {
   background: white image-url('city.jpg') no-repeat center 213px;
