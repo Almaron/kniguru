@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130822065740) do
+ActiveRecord::Schema.define(version: 20130822114825) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id",    null: false
@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(version: 20130822065740) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "published_on"
+    t.text     "abstract"
   end
 
   add_index "presses", ["published_on"], name: "index_presses_on_published_on"

@@ -10,6 +10,9 @@
     = f.label :head
     = f.text_field :head
   .form_line
+    = f.label :abstract
+    = f.text_area :abstract
+  .form_line
     = f.label :content
     = f.text_area :content
   .form_line
@@ -18,8 +21,5 @@
   .form_line
     = f.label :paper_url
     = f.text_field :paper_url
-  .form_line
-    = f.label :published_on
-    = f.text_field :published_on
   .form_line
     = f.submit 'Save'
