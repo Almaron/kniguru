@@ -186,9 +186,13 @@ h3.green {
     text-decoration: none;
     font-size: 16px;
     line-height: 1.2em;
+    display: inline-table;
     &:hover {
       text-decoration: underline;
     }
+  }
+  span {
+    display: inline-table;
   }
 }
 

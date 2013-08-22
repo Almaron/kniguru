@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  after_create :create_profile 
+  after_create :profile_create
   
   authenticates_with_sorcery!
 
@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   has_many :books
   has_one  :profile
   has_many :comments
+  has_many :tracks
+
   has_many :profile_comments, :as => :commentable
   has_many :profile_tracks, :as => :trackable
 
@@ -19,13 +21,13 @@ class User < ActiveRecord::Base
   has_many :user_badges
   has_many :badges, :through => :user_badges
   
-  has_many :tracks
+
   
   private
   
-  def  create_profile
-      self.profile.create!
-      self.suscription.create
+  def  profile_create
+      self.create_profile
+      self.subscription.create
   end
   
   def static_badge(*options)
