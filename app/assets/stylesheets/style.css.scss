@@ -20,6 +20,9 @@ a {
   }
   &:visited {}
 }
+.wrapper {
+  width:100%;
+}
 
 /* FORM >> Validation */
 
@@ -99,6 +102,7 @@ h3.green {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ab4e', endColorstr='#72de79',GradientType=1 );
   /* IE6-9 */
+  width:100%;
 }
 
 .greengrad2 {
