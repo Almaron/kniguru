@@ -5,6 +5,6 @@
   .content
     = press.head if press.paper_name
     %br
-    = simple_format "#{press.abstract}[...]"
+    = simple_format "#{strip_tags(press.content).slice(/\A(.{200}.*?)\s/)}[...]"
   .small_date
     = l press.created_at
