@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130821144617) do
+ActiveRecord::Schema.define(version: 20130822065740) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id",    null: false
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 20130821144617) do
 
   create_table "news", force: true do |t|
     t.string   "head"
-    t.string   "text"
+    t.text     "text",       limit: 255
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
