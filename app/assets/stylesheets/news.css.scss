@@ -1,7 +1,11 @@
 .one_news {
+  padding: 5px;
   div {
     display: inline-block;
     margin-right: 10px;
+    &.news_date {
+      width: 125px;
+    }
   }
 }
 
