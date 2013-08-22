@@ -1,5 +1,7 @@
 .innerbox.innerbox_list
-  %h2 = link_to writing.paper_name, writing
+  %h2
+    - name = writing.paper_name || writing.head
+    = link_to name, writing
   .content
-    = writing.head    
-  .small_date = l writing.published_on
+    = writing.head if writing.paper_name
+  .small_date = l writing.created_at
