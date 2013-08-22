@@ -864,6 +864,10 @@ h3.green {
   color: #000000;
   font-size: 16px;
   text-align: justify;
+  line-height: 17px;
+  p {
+    margin-top:0;
+  }
 }
 
 .innerbox-form {

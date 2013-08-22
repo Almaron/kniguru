@@ -3,7 +3,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :google, '1043003797600.apps.googleusercontent.com', 'O3uZ2gTqTKzgp9J3PL3M4AdG'
   provider :facebook, '371805159614392', 'bf4450c791479af6c8ccf09325398b51'
   provider :vkontakte, '3835066', 'tWPqpZ7u3JtZqbanVyAW'
-  provider :odnoklassniki, '',''
+  provider :odnoklassniki, 'CBACAEIMABABABABA','9F7C01ED06B35D1441585070'
 end
 
 OAUTH_PROVIDERS = [:twitter, :google, :facebook, :vkontakte, :odnoklassniki]
