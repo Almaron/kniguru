@@ -1,3 +1,71 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "mixins";
+
+.login_wrap {
+  width: 300px;
+  height:240px;
+  text-align: center;
+  .login_form {
+    color: #451a7f;
+    display: inline-table;
+    padding-bottom: 10px;
+    h2 {
+      margin-bottom: 5px;
+      padding: 10px 0;
+      text-align: left;
+      font-family: Corbel;
+    }
+    .form_line {
+      label {
+        display: inline-table;
+        width: 70px;
+      }
+      input[type=submit] {
+        color: #451a7f;
+        border: 1px solid #451a7f;
+        border-radius: 5px;
+        padding: 2px 20px;
+        &:hover {
+          background: #451a7f;
+          color: white;
+        }
+      }
+      input[type=text] {
+        color: #451a7f;
+        border-color: #451a7f;
+        border-radius: 2px;
+        padding: 1px 2px ;
+      }
+    }
+  }
+  .omniauth_login {
+    width: 300px;
+    text-align: center;
+    display: inline-table;
+    .auth_provider {
+      width: 132px;
+      display: inline-block;
+      .omniauth-icons-vkontakte {
+        @include omniauth-bg("vk");
+      }
+      .omniauth-icons-google {
+        @include omniauth-bg("google");
+      }
+      .omniauth-icons-facebook {
+        @include omniauth-bg("fb");
+      }
+      .omniauth-icons-odnoklassniki {
+        @include omniauth-bg("odnokl");
+      }
+      .omniauth-icons-twitter {
+        @include omniauth-bg("twit");
+      }
+    }
+  }
+  &.big {
+    width:100%;
+  }
+}

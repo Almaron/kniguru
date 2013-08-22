@@ -2,9 +2,7 @@ class User < ActiveRecord::Base
   
   after_create :create_profile 
   
-  authenticates_with_sorcery! do |config|
-    config.authentications_class = Authentication
-  end
+  authenticates_with_sorcery!
 
   mount_uploader :avatar, AvatarUploader
   
@@ -13,6 +11,8 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :profile_comments, :as => :commentable
   has_many :profile_tracks, :as => :trackable
+
+  has_many :authentications
   
   has_one :subscription
   

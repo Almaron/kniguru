@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   before_action :require_user, :only => :destroy
   
   def new
-      @user = User.new
+      render :layout => false
   end
 
   def create

@@ -1,0 +1,21 @@
+- content_for :pagetitle do
+  Вход на сайт
+
+%div{:class => "login_wrap #{"big" if params[:action] == "create"}"}
+  .login_form
+    - unless params[:action] == "create"
+      %h2 Вход на сайт
+    = form_for User.new, :url => login_path, :method => :post do |f|
+      .form_line
+        = f.label :username
+        = f.text_field :username
+      .form_line
+        = f.label :password
+        = f.text_field :password
+      .form_line
+        = f.submit "Login"
+
+  .omniauth_login
+    - OAUTH_PROVIDERS.each do |provider|
+      .auth_provider
+        = link_to "", "/auth/#{provider.to_s}", :class=>"omniauth-icons-#{provider}"

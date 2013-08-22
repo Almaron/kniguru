@@ -5,7 +5,7 @@ Kniguru::Application.routes.draw do
   resources :news
 
   get "auth/oauth"    => "authentications#new", :as => "auth"
-  get "auth/callback" => "authentications#create"
+  get "auth/:provider/callback" => "authentications#create"
   get "auth/:id/destroy" => "authentications#destroy", :as => "destroy_auth"
   
   get  "login"  =>  "sessions#new",     :as => :login

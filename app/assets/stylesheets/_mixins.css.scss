@@ -1,0 +1,9 @@
+@mixin omniauth-bg($provider) {
+  background-image: image-url("omniauth-icons/#{$provider}.png");
+  width: 132px;
+  height: 32px;
+  display: inline-block;
+  &:hover {
+    background-image: image-url("omniauth-icons/#{$provider}_over.png");
+  }
+}

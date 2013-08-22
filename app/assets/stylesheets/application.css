@@ -11,7 +11,9 @@
  *= require_self
  *= require base
  *= require style
+ *= require fancybox
  *= require news
  *= require admin_forms
  *= require press
+ *= require pages
  */

@@ -9,7 +9,7 @@
       %li
         = link_to "Новости", news_index_path
     .top-enter
-      %a.popup{:href => "/login"} Войти
+      = link_to "Войти", login_path, :class => "fancybox_ajaxs popup"
       %span.sep
       %a.popup{:href => "/register"} Зарегистрироваться
 .topline.greengrad

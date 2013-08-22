@@ -6,23 +6,32 @@ class AuthenticationsController < ApplicationController
   
   def create
       provider = params[:provider]
+      uid = auth_hash[:uid]
       if current_user
-          add_provider_to_user(provider)
+          auth = Authentication.find_or_create_by(:provider => provider, :uid => uid)
+          auth.user = current_user
+          auth.save
           redirect_to current_user
-      elsif @user = login_from(provider)
-          redirect_to @user, :notice => "Login success"
+      elsif (auth = Auth.find_by(:provider => provider, :uid => uid)) && auth.user.present?
+          auto_login auth.user
+          redirect_to auth.user, :notice => "Login success"
       else
-          @user = create_from(provider)          
-          reset_session
-          auto_login @user
-          redirect_to @user
+         auth = Authentication.find_or_create_by(:provider => provider, :uid => uid)
+         session[:auth_id] = auth.id
+         redirect_to new_user_path
       end
   end
 
   def destroy
       @auth = Authentication.find(params[:id])
       @auth.destroy if @auth.user_id == current_user.id
-      redirect_to user_path(@auth.user_id)
+      redirect_to @auth.user
+  end
+
+  private
+
+  def auth_hash
+    request.env['omniauth.auth']
   end
   
 end
