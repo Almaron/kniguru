@@ -11,4 +11,4 @@
 .innerbox
   = simple_format @press.content
   .press_paper_link
-    = link_to @press.paper_name, @press.paper_url
+    = link_to(@press.paper_name, @press.paper_url) if @press.paper_name
