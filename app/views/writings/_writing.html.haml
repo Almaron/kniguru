@@ -2,6 +2,6 @@
   %h2
     - name = writing.paper_name || writing.head
     = link_to name, writing
+  .small_date= l writing.created_at
   .content
-    = writing.head if writing.paper_name
-  .small_date = l writing.created_at
+    = writing.abstract

@@ -6,9 +6,9 @@
 
 .inner-container-content
   .small_date
-    = l @writing.published_on
+    = l @writing.created_at
 
 .innerbox
   = @writing.content.html_safe
   .press_paper_link
-    = link_to @writing.paper_name, @writing.paper_url
+    = link_to @writing.paper_name, @writing.paper_url if @writing.paper_name
