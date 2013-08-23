@@ -103,6 +103,7 @@ h3.green {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ab4e', endColorstr='#72de79',GradientType=1 );
   /* IE6-9 */
   width:100%;
+  min-width: 920px;
 }
 
 .greengrad2 {
@@ -275,6 +276,8 @@ h3.green {
   -webkit-box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.1);
+  width:100%;
+  min-width: 920px;
   table {
     width: 100%;
     td {
