@@ -74,6 +74,7 @@ group :development do
   gem "rvm-capistrano"
 end
 
+gem "nokogiri", :group => "development"
 group :development, :test do
   gem 'debugger'
   gem "rspec-rails"

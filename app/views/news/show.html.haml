@@ -2,7 +2,7 @@
   = @news.head
 
 .news_content.inner-container-content
-  = image_tag(@news.image_url) if @news.image?
+  //= image_tag(@news.image_url) if @news.image?
   = @news.text.html_safe
 - if @news.comments.any?
   .news_comments#news_comments

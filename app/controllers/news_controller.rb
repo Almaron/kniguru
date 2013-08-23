@@ -2,7 +2,7 @@ class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
   def index
-    @news = News.order(:created_at => :desc).paginate(:page => params[:page], :per_page => 10)
+    @news = News.order(:created_at => :desc).paginate(:page => params[:page], :per_page => 5)
   end
 
   def show

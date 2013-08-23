@@ -141,6 +141,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.23)
+    mini_portile (0.5.1)
     minitest (4.7.5)
     multi_json (1.7.7)
     multipart-post (1.2.0)
@@ -152,6 +153,8 @@ GEM
     net-ssh (2.6.8)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     oauth (0.4.7)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -312,6 +315,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   mysql2
+  nokogiri
   omniauth
   omniauth-facebook
   omniauth-google

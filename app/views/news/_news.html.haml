@@ -1,5 +1,11 @@
-.one_news{:id => "news#{news.id}"}
-  .news_date
-    = l news.created_at
+.one_news.innerbox{:id => "news#{news.id}"}
   .news_head
     = link_to news.head, news
+  .small_date
+    = l news.created_at
+  .content
+    - if news.image?
+      = image_tag news.image_url(:thumb), :align => "left", :hspace => "10"
+    = strip_tags(news.text).sub(/\A(.{200}.*?\.).*\z/m,"\\1")
+    = link_to "Читать дальше", news
+

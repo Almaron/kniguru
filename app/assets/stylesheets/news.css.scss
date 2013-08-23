@@ -1,11 +1,13 @@
 .one_news {
-  padding: 5px;
-  div {
+  .news_date {
+    width: 125px;
+  }
+  .news_image {
     display: inline-block;
-    margin-right: 10px;
-    &.news_date {
-      width: 125px;
-    }
+    padding-right: 10px;
+  }
+  .content {
+    display: inline-block;
   }
 }
 
@@ -14,7 +16,7 @@
   a {
     img {
       float: left;
-      padding: 0 5px 5px 0;
+      padding: 0 10px 10px 0;
     }
   }
 }
