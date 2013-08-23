@@ -2,9 +2,10 @@
   %h2
     - name = press.paper_name || press.head
     = link_to name, press
+  .small_date
+    = l press.created_at
   .content
     = press.head if press.paper_name
     %br
-    = simple_format "#{strip_tags(press.content).sub(/\A(.{200}.*?)\s.*\z/m,"\\1[..]")}"
-  .small_date
-    = l press.created_at
+    = strip_tags(press.content).sub(/\A(.{200}.*?\.).*\z/m,"\\1")
+    = link_to "Читать дальше", press
