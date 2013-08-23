@@ -1,5 +1,5 @@
 - content_for :pagetitle do
-  = @news.head
+  = @news.head || "Новость"
 
 .news_content.inner-container-content
   //= image_tag(@news.image_url) if @news.image?
