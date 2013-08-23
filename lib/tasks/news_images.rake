@@ -1,3 +1,4 @@
+#encoding: utf-8
 namespace :news do
 
   desc "Extracting news images"
@@ -8,10 +9,7 @@ namespace :news do
         if doc.at_css("a img")
           news.remote_image_url = doc.at_css("a img")[:src]
           news.save
-          puts "#{news.id} success"
         end
-      rescue ArgumentError => e
-        puts "#{news.id} failed"
       end
     end
   end
