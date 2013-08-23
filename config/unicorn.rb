@@ -1,6 +1,6 @@
 deploy_to  = "/home/rails/www/kniguru"
 rails_root = "#{deploy_to}/current"
-pid_file   = "#{deploy_to}/shared/tmp/pids/unicorn.pid"
+pid_file   = "#{deploy_to}/current/tmp/pids/unicorn.pid"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
 log_file   = "#{rails_root}/log/unicorn.log"
 err_log    = "#{rails_root}/log/unicorn_error.log"

@@ -9,7 +9,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 set :use_sudo, false
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
-set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
+set :unicorn_pid, "#{deploy_to}/current/tmp/pids/unicorn.pid"
 
 set :rvm_ruby_string, '2.0.0-p247@kniguru'
 set :bundle_dir, ''
