@@ -6,6 +6,6 @@
   .content
     - if news.image?
       = image_tag news.image_url(:thumb), :align => "left", :hspace => "10"
-    = strip_tags(news.text).sub(/\A(.*?\.).*\z/m,"\\1")
+    = strip_tags(news.text).sub(/\A(.*?\.).*\z/m,"\\1").html_safe?
     = link_to "Читать дальше", news
 
