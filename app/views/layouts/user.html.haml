@@ -1,0 +1,20 @@
+!!!
+/ paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lt IE 7 ] <html class="ie6" lang="en">
+/[if IE 7 ] <html class="ie7" lang="en">
+/[if IE 8 ] <html class="ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  = render :partial => 'head'
+  %body
+    .wrapper
+      = render :partial => 'top'
+      .main.clearfix
+        .in.main-in
+          .separated.clearfix
+            .separated-big
+              .inner-container.cyan.inner-container-wide
+                %h1 Действие в данный момент невозможно
+                .inner-container-content В данный момент продолжается выгрузка и обработка пользователей сайта. Как только этот процесс будет завершен, вы сможете выполнить данное действие.
+      = render :partial => 'footer'

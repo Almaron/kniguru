@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
+
+  layout "user"
     
   before_action :require_user, :only => :destroy
   
   def new
-      render :layout => false
+    #  render :layout => false
   end
 
   def create
