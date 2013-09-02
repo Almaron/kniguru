@@ -20,12 +20,15 @@ class UsersController < ApplicationController
 
   def new
       @user = User.new
+    #render :layout => "application"
     redirect_to root_path
   end
 
   def step2
     @user = User.new(user_params)
-    unless @user.valid?
+    if @user.valid?
+      render :layout => "application"
+    else
       render :new
     end
   end

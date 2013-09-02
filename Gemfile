@@ -64,6 +64,8 @@ gem 'carrierwave'
 gem 'whenever'
 gem 'will_paginate'
 
+gem 'russian'
+
 # Use unicorn as the app server
 gem 'unicorn'
 

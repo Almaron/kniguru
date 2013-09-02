@@ -2,14 +2,29 @@
   Регистрация: шаг 1
 
 .inner-container-content
-  .innerbox.innerbox-form
+  - if user.errors.any?
+    .innerbox
+      - @model.errors.full_messages.each do |msg|
+        .msg_line
+          = msg
+
+  .innerbox.innerbox-form#form-reg-1
     = form_for @user, :url => step2_users_path do |f|
-      .form-line
+      .form_line
         = f.label :username, "Имя пользователя"
-        = f.text_field :username
-      .form-line
+        = f.text_field :username, :class=>"inp"
+      .form_line
         = f.label :email, "Электронная почта"
-        = f.text_field :email
-      .form-line
+        = f.text_field :email, :class=>"inp"
+      .form_line
         = f.label :birthday, "Дата рождения"
-        = f.date_select :birthday
+        = f.date_select :birthday, {:order => [:day, :month, :year], :start_year => 1940, :end_year => Time.now.year - 4, :default => 4.years.ago}
+      .form_line
+        = f.label :password, "Пароль"
+        = f.text_field :password, :class=>"inp"
+      .form_line
+        = f.label :password_confirmation, "Повторите пароль"
+        = f.text_field :password_confirmation, :class=>"inp"
+      .form_line
+        = f.submit "Продолжить"
+

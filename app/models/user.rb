@@ -6,7 +6,10 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  validates_presence_of :password, :if => :new_record?
   validates_confirmation_of :password, :if => :password
+  validates_presence_of :username
+  validates_presence_of :email
 
   has_one  :profile
   has_one :subscription
@@ -53,6 +56,10 @@ class User < ActiveRecord::Base
   
   def send_subscription
       UserMailer.subscribtion(self).deliver
+  end
+
+  def password_required?
+    self.new_record?
   end
   
 end

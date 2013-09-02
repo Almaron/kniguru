@@ -25,7 +25,7 @@
       }
       input[type=submit] {
         color: #451a7f;
-        border: 1px solid #451a7f;
+        border: 1px solid #8e429d;
         border-radius: 5px;
         padding: 5px 30px 0px;
         &:hover {
@@ -118,10 +118,27 @@
       color: white;
     }
   }
+  select {
+    color: #451a7f;
+    border: 1px solid #8e429d;
+    border-radius: 5px;
+    padding: 5px 30px 0px;
+    &:hover {
+      background: #451a7f;
+      color: white;
+    }
+  }
   input[type=text], input[type=password] {
     color: #451a7f;
     border: 1px solid #451a7f;
     border-radius: 2px;
     padding: 1px 2px ;
+  }
+  .field_with_errors {
+    display: inline;
+    color: red;
+    input, select {
+      border-color: red;
+    }
   }
 }
