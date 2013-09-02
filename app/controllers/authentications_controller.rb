@@ -12,7 +12,7 @@ class AuthenticationsController < ApplicationController
           auth.user = current_user
           auth.save
           redirect_to current_user
-      elsif (auth = Auth.find_by(:provider => provider, :uid => uid)) && auth.user.present?
+      elsif (auth = Authentication.find_by(:provider => provider, :uid => uid)) && auth.user.present?
           auto_login auth.user
           redirect_to auth.user, :notice => "Login success"
       else
