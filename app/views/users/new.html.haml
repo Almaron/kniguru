@@ -2,4 +2,14 @@
   Регистрация: шаг 1
 
 .inner-container-content
-  = form_for @user, :url =>
+  .innerbox.innerbox-form
+    = form_for @user, :url => step2_users_path do |f|
+      .form-line
+        = f.label :username, "Имя пользователя"
+        = f.text_field :username
+      .form-line
+        = f.label :email, "Электронная почта"
+        = f.text_field :email
+      .form-line
+        = f.label :birthday, "Дата рождения"
+        = f.date_select :birthday
