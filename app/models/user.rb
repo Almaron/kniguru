@@ -38,6 +38,7 @@ class User < ActiveRecord::Base
   end
 
   def age
+    self.birthday ||= 30.years.ago
     age = Date.today.year - self.birthday.year
     age -= Date.today < self.birthday + age.years ? 1 : 0
   end
