@@ -48,19 +48,19 @@ module UsersHelper
   end
 
   def adult_profile_info(user)
-    out = "";
+    out = ""
     ["city","age","gender","education","interest","profession"].each do |field|
       div = content_tag(:span, t("helpers.label.profile.#{field}")+": ", :class => "field_name")
-      div << case field
+      roam = case field
                when "age"
-                 user.age
+                 user.age if user.birthday
                when "gender"
-                 t("gender.#{user.profile.gender}")
+                 t("gender.#{user.profile.gender}") if user.profile.gender
                else user.profile.send(field)
              end
-      out << content_tag(:div,div.html_safe,:class => "profile_line")
+      out << content_tag(:div,(div<<roam).html_safe,:class => "profile_line") unless roam.blank?
     end
-    out
+    content_tag(:div,out.html_safe,class:"profile_info")
   end
 
 

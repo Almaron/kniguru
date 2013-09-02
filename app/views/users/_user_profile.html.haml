@@ -11,7 +11,7 @@
       - if user == current_user
         = link_to "", get_options_user_path(user), :class => "login-icons-purple-gear login-icon"
     .user_profile_status
-      Статус
+      &nbsp;
   - if user.young?
     = child_profile_info(user)
     = favourite_books_list(user.profile)
