@@ -24,7 +24,7 @@ module UsersHelper
                    t("gender.#{user.profile.gender}")
                  else user.profile.send(field)
                end
-        out << content_tag(:div,div,:class => "profile_line")
+        out << content_tag(:div,div.html_safe,:class => "profile_line")
       end
     end
     content_tag(:div,out.html_safe,class:"profile_info")
@@ -58,7 +58,7 @@ module UsersHelper
                  t("gender.#{user.profile.gender}")
                else user.profile.send(field)
              end
-      out << content_tag(:div,div,:class => "profile_line")
+      out << content_tag(:div,div.html_safe,:class => "profile_line")
     end
     out
   end

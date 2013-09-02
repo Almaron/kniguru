@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 
   def create
       if (@user = login(params[:user][:username],params[:user][:password]))
+        debugger
         Authentication.find(session[:auth_id]).update(:user_id => @user.id) if session[:auth_id]
         redirect_to @user, :notice => "Login success."
       else
