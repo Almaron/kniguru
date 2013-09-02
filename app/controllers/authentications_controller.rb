@@ -18,6 +18,7 @@ class AuthenticationsController < ApplicationController
       else
          auth = Authentication.find_or_create_by(:provider => provider, :uid => uid)
          session[:auth_id] = auth.id
+         session[:provider] = provider.capitalize
          redirect_to new_user_path
       end
   end

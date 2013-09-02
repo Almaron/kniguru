@@ -8,6 +8,11 @@
         .msg_line
           = msg
 
+  - if session[:provider]
+    .innerbox
+      Вы вошли на сайт с использованием сервиса
+      = session[:provider]+"."
+      Данный аккаунт на этом сервисе не был привязан ни к одному из аккаунтов на Kniguru. Пожалуйста, зарегистрируйтесь или войдите на сайт под своим именем.
   .innerbox.innerbox-form#form-reg-1
     = form_for @user, :url => step2_users_path do |f|
       .form_line

@@ -37,15 +37,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @paraa = user_params
-    @user.profile = Profile.new(user_params[:profile])
 
-    render :layout => "application"
-    #if @user.save
-    #  render :layout => "application"
-    #else
-    #  render :step2
-    #end
+    if @user.save
+      Authentication.find(session[:auth_id]).update(:user_id => @user.id) if session[:auth_id]
+      render :layout => "application"
+    else
+      render :step2
+    end
   end
 
   def edit
