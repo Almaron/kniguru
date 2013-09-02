@@ -3,3 +3,14 @@ ru:
     previous_label: "Предыдущие"
     page_gap: "..."
     next_label: "Следующие"
+
+  helpers:
+    label:
+      user:
+        username: "Логин"
+        password: "Пароль"
+        age: "Возраст"
+
+      profile:
+        gender:  "Пол"
+        age: "Возраст"
