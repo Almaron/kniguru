@@ -14,7 +14,8 @@
         .in.main-in
           .separated.clearfix
             .separated-big
-              .inner-container.cyan.inner-container-wide
-                %h1 Действие в данный момент невозможно
-                .inner-container-content В данный момент продолжается выгрузка и обработка пользователей сайта. Как только этот процесс будет завершен, вы сможете выполнить данное действие.
+              .inner-container.cyan
+                %h1= content_for?(:pagetitle) ? yield(:pagetitle) : t("pagetitles.#{params[:controller]}.#{params[:action]}")
+                = yield
+            = render :partial => "right_panel" if show_panel
       = render :partial => 'footer'

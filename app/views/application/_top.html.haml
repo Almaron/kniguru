@@ -9,9 +9,7 @@
       %li
         = link_to "Новости", news_index_path
     .top-enter
-      = link_to "Войти", login_path, :class => "fancybox_ajaxs"
-      %span.sep
-      = link_to "Зарегистрироваться", new_user_path, :class => ""
+      = login_links
 .topline.greengrad
   .in.topline-in
     %ul.topline-menu

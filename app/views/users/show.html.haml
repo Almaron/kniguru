@@ -1,0 +1,6 @@
+- content_for :pagetitle do
+  Профиль
+
+- logger.info "got to the view"
+= render :partial => profile_partial, :locals => {user:@user}
+

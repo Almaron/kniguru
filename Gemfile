@@ -22,7 +22,7 @@ gem "haml-rails"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc1'
-gem 'compass-rails', github: 'milgner/compass-rails', ref: '1749c06f15dc4b058427e7969810457213647fb8'
+gem "compass-rails", "~> 2.0.alpha.0"
 gem 'zurb-foundation'
 
 gem 'fancybox2-rails'

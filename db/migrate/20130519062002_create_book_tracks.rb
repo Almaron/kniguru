@@ -7,5 +7,7 @@ class CreateBookTracks < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :book_tracks, :user_id
   end
 end

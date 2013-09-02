@@ -6,11 +6,11 @@
 
 .login_wrap {
   width: 300px;
-  height:240px;
+  height:265px;
   text-align: center;
   .login_form {
     color: #451a7f;
-    display: inline-table;
+    display: inline-block;
     padding-bottom: 10px;
     h2 {
       margin-bottom: 5px;
@@ -20,22 +20,22 @@
     }
     .form_line {
       label {
-        display: inline-table;
+        display: inline-block;
         width: 70px;
       }
       input[type=submit] {
         color: #451a7f;
         border: 1px solid #451a7f;
         border-radius: 5px;
-        padding: 2px 20px;
+        padding: 5px 30px 0px;
         &:hover {
           background: #451a7f;
           color: white;
         }
       }
-      input[type=text] {
+      input[type=text], input[type=password] {
         color: #451a7f;
-        border-color: #451a7f;
+        border: 1px solid #451a7f;
         border-radius: 2px;
         padding: 1px 2px ;
       }
@@ -44,9 +44,10 @@
   .omniauth_login {
     width: 300px;
     text-align: center;
-    display: inline-table;
+    display: inline-block;
     .auth_provider {
       width: 132px;
+      margin: 1px;
       display: inline-block;
       .omniauth-icons-vkontakte {
         @include omniauth-bg("vk");
@@ -67,6 +68,12 @@
   }
   &.big {
     width:100%;
+    .omniauth_login {
+      width:auto;
+    }
+    .login_form {
+      display: block;
+    }
   }
 }
 
@@ -75,3 +82,23 @@
   width:100%;
   font-size: 15px;
 }
+@import "login-icons/*.png";
+@include all-login-icons-sprites;
+
+.top-enter {
+  .login_icon {
+    width:16px;
+    height:16px;
+    margin-left: 7px;
+  }
+  .profile_link {
+    position: relative;
+    top: -2px;
+  }
+  sup {
+    font-size: 110%;
+    top: -15px;
+  }
+}
+
+.severe{}

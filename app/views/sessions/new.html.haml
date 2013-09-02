@@ -5,13 +5,17 @@
   .login_form
     - unless params[:action] == "create"
       %h2 Вход на сайт
+    - if params[:action] == "create"
+      = params[:controller]
+      = params[:action]
+      = params[:user]
     = form_for User.new, :url => login_path, :method => :post do |f|
       .form_line
         = f.label :username
         = f.text_field :username
       .form_line
         = f.label :password
-        = f.text_field :password
+        = f.password_field :password
       .form_line
         = f.submit "Login"
 

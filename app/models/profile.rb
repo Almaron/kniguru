@@ -1,5 +1,6 @@
 class Profile < ActiveRecord::Base
-    
-    belongs_to :user
+  serialize :hide_fields, Array
+  serialize :favourite_books, Array
+  belongs_to :user
     
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130823050439) do
+ActiveRecord::Schema.define(version: 20130901233356) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id",    null: false
@@ -124,7 +124,30 @@ ActiveRecord::Schema.define(version: 20130823050439) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "hide_fields"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "country"
+    t.string   "state"
+    t.string   "city"
+    t.string   "adress"
+    t.string   "phone"
+    t.string   "school"
+    t.string   "school_class"
+    t.string   "favourite_class"
+    t.string   "library"
+    t.string   "how_do_you_know"
+    t.boolean  "jury",            default: false
+    t.text     "why_jury"
+    t.string   "education"
+    t.string   "favourite_books"
+    t.string   "profession"
+    t.string   "gender"
+    t.text     "bio"
+    t.string   "interest"
   end
+
+  add_index "profiles", ["jury"], name: "index_profiles_on_jury"
 
   create_table "reviews", force: true do |t|
     t.integer  "user_id"
@@ -172,7 +195,7 @@ ActiveRecord::Schema.define(version: 20130823050439) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "username",                        null: false
+    t.string   "username",                                         null: false
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
@@ -187,6 +210,9 @@ ActiveRecord::Schema.define(version: 20130823050439) do
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
     t.string   "avatar"
+    t.date     "birthday"
+    t.boolean  "author",                          default: false
+    t.string   "group",                           default: "user"
   end
 
   add_index "users", ["activation_token"], name: "index_users_on_activation_token"

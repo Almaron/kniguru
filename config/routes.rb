@@ -1,5 +1,6 @@
 Kniguru::Application.routes.draw do
 
+
   get "subscriptions/edit"
   get "subscriptions/update"
   resources :news
@@ -18,9 +19,13 @@ Kniguru::Application.routes.draw do
          post :send_password_reset
          post :reset_password
          get "reset_password" => "users#password_reset_form"
+         post "/new/step2" => "users#step2", :as => :step2
       end
       member do
-          get :activate          
+        get :activate
+        get :wall
+        get :get_options
+        patch :set_options
       end      
   end
   
@@ -48,6 +53,13 @@ Kniguru::Application.routes.draw do
   resources :badges, :except => [:new]
 
   resources :reviews
+
+  resources :book_tracks, only: [:index, :create, :destroy] do
+    member do
+      patch :read
+      patch :unread
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

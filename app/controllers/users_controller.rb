@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     
 include ActivateAndReset
 
-  before_action :get_user, :only => [:show, :edit, :update, :destroy] 
+  before_action :get_user, :only => [:show, :edit, :update, :destroy, :wall, :get_options, :set_options]
   
   def index
       @users = User.all
@@ -14,15 +14,36 @@ include ActivateAndReset
      @user.save  
   end
 
+  def wall
+     unless @user.author
+       redirect_to @user
+     end
+  end
+
   def new
       @user = User.new
   end
 
+  def step2
+    @user = User.new(user_params)
+    unless @user.valid?
+      render :new
+    end
+  end
+
   def create
-      @user = User.create(user_params)
+      @user = User.new(user_params)
   end
 
   def edit
+  end
+
+  def get_options
+
+  end
+
+  def set_options
+
   end
 
   def update
@@ -41,7 +62,7 @@ include ActivateAndReset
   private
    
   def get_user
-    @user = User.find(params[:id])
+    @user = User.includes(:profile).find(params[:id])
   end
 
   def user_params

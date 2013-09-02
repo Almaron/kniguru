@@ -1,0 +1,40 @@
+.innerbox
+  - if user == current_user
+    .innerbox_edit
+      = link_to "", edit_user_path(user), :class=>"edit"
+  .profile_main
+    - logger.info "got in the partial"
+    .user_avatar
+      = user_avatar(user)
+    .user_profile_head
+      = user.full_name
+      - if user == current_user
+        = link_to "", get_options_user_path(user), :class => "login-icons-purple-gear login-icon"
+    .user_profile_status
+      Статус
+  - if user.young?
+    = child_profile_info(user)
+    = favourite_books_list(user.profile)
+    = why_jury(user.profile)
+  - else
+    = adult_profile_info(user)
+
+- if user.book_tracks.will_read.any?
+  .innerbox.listos#books_will_read
+    - if user == current_user
+      .innerbox_edit
+        = link_to "", book_tracks_path, :class=>"edit", :remote =>  true
+    %h2
+      Собираюсь прочитать
+    = book_tracks_list(user.book_tracks.will_read)
+
+- if user.book_tracks.read.any?
+  .innerbox.listos#books_will_read
+    - if user == current_user
+      .innerbox_edit
+        = link_to "", book_tracks_path(:read => true), :class=>"edit", :remote =>  true
+    %h2
+      Прочитал
+    = book_tracks_list(user.book_tracks.read)
+
+

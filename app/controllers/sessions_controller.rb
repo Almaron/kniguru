@@ -1,18 +1,17 @@
 class SessionsController < ApplicationController
 
-  layout "user"
     
-  before_action :require_user, :only => :destroy
+  before_action :require_login, :only => :destroy
   
   def new
-    #  render :layout => false
+      render :layout => false
   end
 
   def create
-      if (@user = login(params[:username],params[:password]))
-          redirect_to @user, :notice => "Login success."
-      else 
-          render :new, :alert => "Login falure!!"
+      if (@user = login(params[:user][:username],params[:user][:password]))
+        redirect_to @user, :notice => "Login success."
+      else
+        render :new, :alert => "Login falure!!"
       end
   end
 
