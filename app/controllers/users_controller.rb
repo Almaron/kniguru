@@ -22,6 +22,7 @@ include ActivateAndReset
 
   def new
       @user = User.new
+    redirect_to root_path
   end
 
   def step2
@@ -36,9 +37,11 @@ include ActivateAndReset
   end
 
   def edit
+    redirect_to @user
   end
 
   def get_options
+    redirect_to @user
 
   end
 
