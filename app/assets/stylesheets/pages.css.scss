@@ -6,7 +6,7 @@
 
 .login_wrap {
   width: 300px;
-  height:265px;
+  height:280px;
   text-align: center;
   .login_form {
     color: #451a7f;
@@ -76,6 +76,9 @@
     }
   }
 }
+.mini_link {
+  font-size: 14px;
+}
 
 .navigation {
   margin-top: 10px;
@@ -101,4 +104,24 @@
   }
 }
 
-.severe{}
+.form_line {
+  label {
+    display: inline-block;
+  }
+  input[type=submit] {
+    color: #451a7f;
+    border: 1px solid #451a7f;
+    border-radius: 5px;
+    padding: 5px 30px 0px;
+    &:hover {
+      background: #451a7f;
+      color: white;
+    }
+  }
+  input[type=text], input[type=password] {
+    color: #451a7f;
+    border: 1px solid #451a7f;
+    border-radius: 2px;
+    padding: 1px 2px ;
+  }
+}

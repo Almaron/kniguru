@@ -18,6 +18,7 @@
         = f.password_field :password
       .form_line
         = f.submit "Войти"
+    = link_to t("links.forgot_password"), password_ask_email_users_path, :class => "mini_link"
 
   .omniauth_login
     - OAUTH_PROVIDERS.each do |provider|

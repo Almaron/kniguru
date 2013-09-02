@@ -4,13 +4,22 @@ ru:
     page_gap: "..."
     next_label: "Следующие"
 
+  links:
+   logout: "Выйти"
+   forgot_password: "Забыли пароль?"
+
   helpers:
     label:
       user:
         username: "Логин"
         password: "Пароль"
+        password_confirmation: "Подтверждение"
         age: "Возраст"
 
       profile:
         gender:  "Пол"
         age: "Возраст"
+
+  password_reset:
+    success: "На указанный адрес отправлено письмо с данными для создания нового пароля"
+    fail: "Данный адрес email на сайте не зарегистрирован"

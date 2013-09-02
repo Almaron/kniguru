@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
 
   layout "user"
-    
-include ActivateAndReset
 
   before_action :get_user, :only => [:show, :edit, :update, :destroy, :wall, :get_options, :set_options]
   
@@ -60,6 +58,48 @@ include ActivateAndReset
 
   def destroy
       @user.destroy
+  end
+
+  def activate
+    if (@user = User.load_from_activation_token(params[:id]))
+      @user.activate!
+      redirect_to(login_path, :notice => 'User was successfully activated.')
+    else
+      not_authenticated
+    end
+  end
+
+  def password_ask_email
+    render :layout => "application"
+  end
+
+  def send_password_reset
+    if (@user = User.find_by(:email => params[:username]))
+      @user.deliver_reset_password_instructions!
+      @text = t("password_reset.success")
+    else
+      @text = t("password_reset.fail")
+    end
+    render :layout => "application"
+  end
+
+  def password_reset_form
+    @user = User.load_from_reset_password_token(params[:token])
+    @token = params[:token]
+    not_authenticated unless @user
+  end
+
+  def reset_password
+    @token = params[:token]
+    @user = User.load_from_reset_password_token(params[:token])
+    not_authenticated and return unless @user
+    @user.password_confirmation = params[:user][:password_confirmation]
+    if @user.change_password!(params[:user][:password])
+      auto_login(@user)
+      redirect_to @user
+    else
+      render :action => :password_reset_form
+    end
   end
 
   private
