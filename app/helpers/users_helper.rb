@@ -60,6 +60,7 @@ module UsersHelper
              end
       out << content_tag(:div,div,:class => "profile_line")
     end
+    out
   end
 
 
