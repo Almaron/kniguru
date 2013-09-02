@@ -38,6 +38,39 @@
 
 #form-reg-1 {
   label {
-    width:160px;
+    width:220px;
+    text-align: left;
+    display: inline-block;
+    float: none;
+  }
+  input { display: inline;}
+  input[type=text] {
+    width:240px;
+  }
+  textarea {
+    width:800px;
+    margin-top: 5px;
+    height:50px;
+  }
+  .secure {
+    display: inline;
+    label {
+      width: auto;
+      padding-right: 20px;
+    }
+    input {
+      position: relative;
+      top:4px;
+      display: inline-block;
+    }
+  }
+  .form_line_merge {
+    label {
+      width:auto;
+      padding-right: 20px;
+    }
+    span {
+      padding-right: 20px;
+    }
   }
 }

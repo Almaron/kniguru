@@ -20,13 +20,15 @@ class UsersController < ApplicationController
 
   def new
       @user = User.new
-    #render :layout => "application"
-    redirect_to root_path
+    render :layout => "application"
+    #redirect_to root_path
   end
 
   def step2
     @user = User.new(user_params)
     if @user.valid?
+      @user.profile = Profile.new
+      @user.need_agree = true
       render :layout => "application"
     else
       render :new
@@ -34,7 +36,16 @@ class UsersController < ApplicationController
   end
 
   def create
-      @user = User.new(user_params)
+    @user = User.new(user_params)
+    @paraa = user_params
+    @user.profile = Profile.new(user_params[:profile])
+
+    render :layout => "application"
+    #if @user.save
+    #  render :layout => "application"
+    #else
+    #  render :step2
+    #end
   end
 
   def edit
@@ -112,7 +123,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :profile_attributes)
+    params.require(:user).permit(:username, :birthday, :email, :password, :password_confirmation, :profile_attributes => [:first_name])
   end
   
 end

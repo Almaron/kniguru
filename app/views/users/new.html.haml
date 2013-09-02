@@ -2,9 +2,9 @@
   Регистрация: шаг 1
 
 .inner-container-content
-  - if user.errors.any?
-    .innerbox
-      - @model.errors.full_messages.each do |msg|
+  - if @user.errors.any?
+    .innerbox.box-errors
+      - @user.errors.full_messages.each do |msg|
         .msg_line
           = msg
 

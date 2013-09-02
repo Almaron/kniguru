@@ -6,12 +6,17 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+
+  attr_accessor :agree , :need_agree
+
+  validates :username, :presence => true, :uniqueness => true
+  validates_presence_of :email
   validates_presence_of :password, :if => :new_record?
   validates_confirmation_of :password, :if => :password
-  validates_presence_of :username
-  validates_presence_of :email
+  validates_presence_of :agree, :if => :need_agree, :message => "^Необходимо принять условия соглашения"
 
   has_one  :profile
+  accepts_nested_attributes_for :profile
   has_one :subscription
 
   has_many :books
@@ -58,8 +63,6 @@ class User < ActiveRecord::Base
       UserMailer.subscribtion(self).deliver
   end
 
-  def password_required?
-    self.new_record?
-  end
+
   
 end

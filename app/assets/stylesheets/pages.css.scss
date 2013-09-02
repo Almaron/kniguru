@@ -118,15 +118,11 @@
       color: white;
     }
   }
-  select {
+  select, textarea {
     color: #451a7f;
     border: 1px solid #8e429d;
     border-radius: 5px;
-    padding: 5px 30px 0px;
-    &:hover {
-      background: #451a7f;
-      color: white;
-    }
+    padding: 5px 10px 0px;
   }
   input[type=text], input[type=password] {
     color: #451a7f;
@@ -141,4 +137,8 @@
       border-color: red;
     }
   }
+}
+
+.box-errors {
+  color:red;
 }

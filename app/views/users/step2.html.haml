@@ -1,0 +1,133 @@
+-content_for :pagetitle do
+  Регистрация: шаг 2
+
+.inner-container-content#form-reg-1
+  - if @user.errors.any?
+    .innerbox.box-errors
+      - @user.errors.full_messages.each do |msg|
+        .msg_line
+          = msg
+
+  = form_for @user do |f|
+    = f.hidden_field :username
+    = f.hidden_field :email
+    = f.hidden_field :password
+    = f.hidden_field :password_confirmation
+    = f.hidden_field :birthday
+    = f.fields_for :profile do |fi|
+      .innerbox
+        .form_line
+          = fi.label :first_name, "Имя"
+          = fi.text_field :first_name
+          .secure
+            = check_box_tag "profile_hide_first_name", "first_name", false, {:name => "user[profile_attributes][hide_fields][]"}
+            = label_tag :profile_hide_first_name, "скрыть"
+        .form_line
+          = fi.label :last_name, "Фамилия"
+          = fi.text_field :last_name
+          .secure
+            = check_box_tag "profile_hide_last_name", "last_name", false, {:name => "user[profile_attributes][hide_fields][]"}
+            = label_tag :profile_hide_last_name, "скрыть"
+        .form_line
+          = fi.label :country, "Страна"
+          = fi.text_field :country
+          .secure
+            = check_box_tag "profile_hide_country", "country", false, {:name => "user[profile_attributes][hide_fields][]"}
+            = label_tag :profile_hide_country, "скрыть"
+        .form_line
+          = fi.label :state, "Область"
+          = fi.text_field :state
+          .secure
+            = check_box_tag "profile_hide_state", "state", false, {:name => "user[profile_attributes][hide_fields][]"}
+            = label_tag :profile_hide_state, "скрыть"
+        .form_line
+          = fi.label :city, "Населенный пункт"
+          = fi.text_field :city
+          .secure
+            = check_box_tag "profile_hide_city", "city", false, {:name => "user[profile_attributes][hide_fields][]"}
+            = label_tag :profile_hide_city, "скрыть"
+        .form_line
+          = fi.label :adress, "Адрес"
+          = fi.text_field :adress
+          .secure
+            = check_box_tag "profile_hide_adress", "adress", false, {:name => "user[profile_attributes][hide_fields][]"}
+            = label_tag :profile_hide_adress, "скрыть"
+        .form_line
+          = fi.label :phone, "Телефон"
+          = fi.text_field :phone
+          .secure
+            = check_box_tag "profile_hide_phone", "phone", false, {:name => "user[profile_attributes][hide_fields][]"}
+            = label_tag :profile_hide_phone, "скрыть"
+
+      - if @user.age < 16
+        .innerbox
+          .form_line
+            = fi.label :phone, "Школа"
+            = fi.text_field :phone
+            .secure
+              = check_box_tag "profile_hide_phone", "phone", false, {:name => "user[profile_attributes][hide_fields][]"}
+              = label_tag :profile_hide_phone, "скрыть"
+          .form_line
+            = fi.label :phone, "Класс"
+            = fi.text_field :phone
+            .secure
+              = check_box_tag "profile_hide_phone", "phone", false, {:name => "user[profile_attributes][hide_fields][]"}
+              = label_tag :profile_hide_phone, "скрыть"
+          .form_line
+            = fi.label :phone, "Любимый предмет"
+            = fi.text_field :phone
+            .secure
+              = check_box_tag "profile_hide_phone", "phone", false, {:name => "user[profile_attributes][hide_fields][]"}
+              = label_tag :profile_hide_phone, "скрыть"
+          .form_line
+            = fi.label :phone, "Какую библиотеку посещаете?"
+            = fi.text_field :phone
+            .secure
+              = check_box_tag "profile_hide_phone", "phone", false, {:name => "user[profile_attributes][hide_fields][]"}
+              = label_tag :profile_hide_phone, "скрыть"
+          .form_line
+            = fi.label :phone, "Откуда вы узнали о конкурсе"
+            = fi.text_field :phone
+            .secure
+              = check_box_tag "profile_hide_phone", "phone", false, {:name => "user[profile_attributes][hide_fields][]"}
+              = label_tag :profile_hide_phone, "скрыть"
+        .innerbox
+          .form_line.form_line_merge
+            %span Хотите ли вы стать членом жюри?
+            = fi.radio_button :jury, 1
+            = fi.label :jury_1, "да"
+            = fi.radio_button :jury, 0
+            = fi.label :jury_0, "нет"
+          .form_line
+            %span Почему вы хотите работать в жюри
+            %div
+              = fi.text_area :why_jury
+            .secure
+              = check_box_tag "profile_hide_why_jury", "why_jury", false
+              = label_tag :profile_hide_why_jury, "скрыть"
+      - else
+        .innerbox
+          .form_line
+            = fi.label :education, "Образование"
+            = fi.text_field :education
+          .form_line
+            = fi.label :interest, "Интерес к конкурсу"
+            .secure
+              = fi.radio_button :interest, "личный"
+              = fi.label :interest, "личный"
+            .secure
+              = fi.radio_button :interest, "профессиональный"
+              = fi.label :interest, "профессиональный"
+          .form_line
+            = fi.label :profession, "&nbsp;".html_safe
+            = fi.select :education, options_for_select(%w(писатель издатель библиотекарь педагог другое), {:include_blank => true})
+      .innerbox
+        .form_line
+          = f.hidden_field :need_agree
+          = check_box_tag "user[agree]"
+          = f.label :agree, "Я принимаю", :style => "width:auto;"
+          условия
+          = link_to "пользовательского соглашения", "/pages/disclaimer"
+        .form_line
+          = f.submit "Зарегистрироваться"
+
